@@ -1,0 +1,22 @@
+{
+  "name": "vchorus",
+  "version": "1.0.0",
+  "description": "performance code for interactice music with bluetooth controller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donundeen/vchorus.git"
+  },
+  "author": "Don Undeen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donundeen/vchorus/issues"
+  },
+  "homepage": "https://github.com/donundeen/vchorus#readme",
+  "dependencies": {
+    "node-web-bluetooth": "^1.1.0"
+  }
+}
