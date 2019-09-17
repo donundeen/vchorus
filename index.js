@@ -1,5 +1,8 @@
 const Bluetooth	= require('node-web-bluetooth');
  
+var OSC = require("osc-js");
+const osc = new OSC({ plugin: new OSC.DatagramPlugin() })
+osc.open({ port: 9912 })
 
 
 async function connect() {
@@ -42,6 +45,8 @@ async function connect() {
         console.log(value7 + "|" + value8);
         var valueInt1 = view1.getUint16(0);
         var valueInt2 = view1.getUint16(2);
+        var message = new OSC.Message('/perifit/1', valueInt1, valueInt2);
+        osc.send(message, { port: 9002 });        
 //        var s1 =2
     });
     /*

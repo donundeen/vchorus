@@ -1,20 +1,14 @@
-require("osc");
 
-var oscPort = new osc.WebSocketPort({
-    url: "ws://localhost:8081", // URL to your Web Socket server.
-    metadata: true
-});
+var OSC = require("osc-js");
+const osc = new OSC({ plugin: new OSC.DatagramPlugin() })
+osc.open({ port: 9912 })
 
+// send only this message to `localhost:9002`
 
-oscPort.on("ready", function () {
-	console.log("sending");
-    oscPort.send({
-        address: "/carrier/frequency",
-        args: [
-            {
-                type: "f",
-                value: 440
-            }
-        ]
-    });
-});
+setInterval(sendMessage, 3000);
+
+function sendMessage(){
+    console.log("sending");
+    var message = new OSC.Message('/test/path', 521.25, 'teststring', 665);
+    osc.send(message, { port: 9002 });
+}
