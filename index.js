@@ -14,10 +14,12 @@ async function connect() {
    
     });
     const server = await device.gatt.connect();
+    console.log("connected");
 
 //    const services = await server.getPrimaryServices();
 //    console.log(services);
     const service = await server.getPrimaryService(0xaa40);
+    console.log("got service");
     const char = await service.getCharacteristic(0xAA41);
     console.log("got charactistic");
     console.log(char);
@@ -26,9 +28,11 @@ async function connect() {
         // parse heart-rate data here
         console.log("++++++++++");
         var buffer = data.target.value.buffer;
-        console.log(data.target.value.buffer);
+ //       console.log(JSON.stringify(data.target, null, " "));
+        console.log(data.target);
         //Create a DataView referring to the buffer 
-        var view1 = new DataView(buffer); 
+	//        var view1 = new DataView(buffer);
+	var view1 = data.target.value;
         /*
         var value1 = view1.getUint8(0).toString(16); //16
         var value2 = view1.getUint8(1).toString(16); //16
