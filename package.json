@@ -19,6 +19,8 @@
   "homepage": "https://github.com/donundeen/vchorus#readme",
   "dependencies": {
     "noble": "^1.9.1",
-    "osc-js": "^2.0.3"
+    "osc": "^2.3.1",
+    "osc-js": "^2.0.3",
+    "xpc-connection": "git://github.com/taoyuan/node-xpc-connection.git"
   }
 }

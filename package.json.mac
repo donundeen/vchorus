@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/donundeen/vchorus#readme",
   "dependencies": {
-    "node-web-bluetooth": "^1.1.0",
+    "noble": "^1.9.1",  
     "osc": "^2.3.1",
     "osc-js": "^2.0.3",
     "xpc-connection": "git://github.com/taoyuan/node-xpc-connection.git"
