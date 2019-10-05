@@ -1,7 +1,10 @@
 Installing on Mac:
 ---
 [install node: https://nodejs.org/en/]
+[install xcode]
+[install xcode command-line tools: https://www.embarcadero.com/starthere/xe5/mobdevsetup/ios/en/installing_the_commandline_tools.html ]
 
+[then in terminal]
 - git clone https://github.com/donundeen/vchorus
 - cd vchorus
 - cp package.json.mac package.json
