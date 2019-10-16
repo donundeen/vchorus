@@ -22,3 +22,7 @@ Installing on RPI:
 - cd vchorus
 - cp package.json.rpi package.json
 - npm install
+[if npm install creates a bunch of errors:]
+- sudo npm install noble --unsafe-perm
+- sudo npm install osc-js
+
