@@ -18,7 +18,6 @@ Installing on RPI:
 - curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
 - sudo apt-get install nodejs
 - sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev
-- sudo ln -s /usr/bin/nodejs /usr/bin/node
 - git clone https://github.com/donundeen/vchorus
 - cd vchorus
 - cp package.json.rpi package.json
