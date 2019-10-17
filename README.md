@@ -15,6 +15,8 @@ Installing on RPI:
 ---
 - sudo apt-get update
 - sudo apt-get upgrade
+- curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+- sudo apt-get install nodejs
 - sudo apt-get install bluetooth bluez libbluetooth-dev libudev-dev
 - sudo ln -s /usr/bin/nodejs /usr/bin/node
 - sudo apt-get install npm
