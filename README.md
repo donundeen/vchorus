@@ -1,6 +1,6 @@
 Installing on Mac:
 ---
-- [install node: https://nodejs.org/en/]
+- [install node: https://nodejs.org/dist/latest-v10.x/node-v10.17.0.pkg]
 - [install xcode]
 - [install xcode command-line tools: https://www.embarcadero.com/starthere/xe5/mobdevsetup/ios/en/installing_the_commandline_tools.html ]
 
