@@ -2,7 +2,7 @@ var noble = require("noble");
 var OSC = require("osc-js");
 const osc = new OSC({ plugin: new OSC.DatagramPlugin() })
 //osc.open({ port: 9912 })
-osc.open({ host: "192.168.1.207", port: 9002 })
+osc.open({ host: "192.168.1.106", port: 9002 })
 
 
 var theService = 'aa40';
@@ -98,7 +98,7 @@ function sendData(data){
     console.log("B: " + valueInt2);
 
     var message = new OSC.Message('/perifit/1', valueInt1, valueInt2);
-    osc.send(message, {  host: "192.168.1.207", port: 9002 });  
+    osc.send(message, {  host: "192.168.1.106", port: 9002 });  
 }
 
 
