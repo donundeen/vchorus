@@ -7,6 +7,7 @@ Installing on Mac:
 [then in terminal]
 - git clone https://github.com/donundeen/vchorus
 - cd vchorus
+- rm package-lock.json
 - cp package.json.mac package.json
 - npm install
 
