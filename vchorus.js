@@ -98,7 +98,7 @@ function sendData(data){
     console.log("B: " + valueInt2);
 
     var message = new OSC.Message('/perifit/1', valueInt1, valueInt2);
-    osc.send(message, { port: 9002 });  
+    osc.send(message, {  host: "192.168.1.207", port: 9002 });  
 }
 
 
