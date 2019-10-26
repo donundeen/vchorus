@@ -1,7 +1,8 @@
 var noble = require("noble");
 var OSC = require("osc-js");
 const osc = new OSC({ plugin: new OSC.DatagramPlugin() })
-osc.open({ port: 9912 })
+//osc.open({ port: 9912 })
+osc.open({ host: "192.168.1.207", port: 9912 })
 
 
 var theService = 'aa40';
