@@ -1,0 +1,45 @@
+inlets = 1;
+outlets = 3;
+///
+
+var termList = {};
+var chordArray = [];
+
+
+function addToList(term){
+  // if the term isn't already in the list, add it and announce a new item
+  if(!termList[term]){
+  	termList[term] = term;
+	announceNewItem();
+    return true;
+  }
+  // otherwise return false;
+  return false;
+
+}
+
+function msg_float(fl){
+  addToList(fl);	
+}
+
+function msg_int(int1){
+  addToList(int1);	
+}
+
+function msg_string(str){
+  addToList(str);	
+}
+
+function emptyIt(){
+  termList  = {};
+}
+
+function announceNewItem(){
+  outlet(1, true);	
+}
+
+function sendList(){
+  var terms = Object.keys(termList)
+  outlet(0, terms);
+
+}
