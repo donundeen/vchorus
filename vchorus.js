@@ -1,15 +1,18 @@
-var noble = require("noble");
-var OSC = require("osc-js");
 
 
-const osc = new OSC({ plugin: new OSC.DatagramPlugin() })
+const noble = require("noble");
+const OSC = require("osc-js");
+
+
+const osc = new OSC({ plugin: new OSC.DatagramPlugin() });
+
 //osc.open({ port: 9912 })
-var host = "localhost";
-var port = 9002
+const hostName = "localhost";
+var portNumber = 9002
 
 var deviceNames = {
                 "939443f4bbaa4c60a9c4b98d7f406723" :  "granite",
-                "e293363ad8414e9f8e1df47d4b9f0ecd" :  "oak"
+                "e293363ad8414e9f8e1df47d4b9f0ecd" :  "oak",
                 };
 
 // host = "192.168.1.107";
@@ -17,7 +20,7 @@ var deviceNames = {
 var devices = {};
 // 
 var deviceTemplate = {
-    name :false,
+    name : false,
     connected : false
 }
 
@@ -25,15 +28,19 @@ var scanTimeMS = 5000;
 
 var numConnected = 0;
 
-osc.open({ host: host, port: port })
-
-
 var theService = 'aa40';
 var theCharacteristic = 'aa41';
 const serviceUUIDs = [theService];
 //const characteristicUUIDs = ['aa41'];
 const characteristicUUIDs = [theCharacteristic];
 var oneConnected = {};
+
+
+osc.open({ 
+    host: hostName, 
+    port: portNumber 
+});
+
 
 noble.on("stateChange", function(state){
     console.log("noble state change");
@@ -153,7 +160,7 @@ function sendData(data, device){
     console.log("B: " + valueInt2);
 
     var message = new OSC.Message('/perifit/1', valueInt1, valueInt2, device.name);
-    osc.send(message, {  host: host, port: port });  
+    osc.send(message, {  host: hostName, port: portNumber });  
 }
 
 
