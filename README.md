@@ -28,3 +28,14 @@ Installing on RPI:
 - sudo npm install noble --unsafe-perm
 - sudo npm install osc-js
 
+[Running manually on the Raspberry Pi]
+- cd vchorus
+- sudo node vchorus.js
+- ctrl-c to cancel the running vchorus.js code
+
+[If it's not working]
+- Check your receiving computer's (the laptop running Max) IP address, and update it in vchorus.js
+- try restarting device
+- ctrl-c to cancel any code running in the terminal on the RPI
+- sudo node vchorus.js
+
