@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 182.0, 80.0, 913.0, 758.0 ],
+		"rect" : [ 136.0, 85.0, 913.0, 758.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -10076,9 +10076,16 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "devices.txt",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/data",
+				"patcherrelativepath" : "../data",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "serialPortIdentifier.maxpat",
-				"bootpath" : "~/Documents/Max/patches/MyTools",
-				"patcherrelativepath" : "../../../../../Max/patches/MyTools",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}

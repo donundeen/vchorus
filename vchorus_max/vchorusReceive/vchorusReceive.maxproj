@@ -2,7 +2,7 @@
 	"name" : "vchorusReceive",
 	"version" : 1,
 	"creationdate" : 2082826314,
-	"modificationdate" : 3693911316,
+	"modificationdate" : 3693912132,
 	"viewrect" : [ 25.0, 104.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -33,6 +33,14 @@
 ,
 			"dynamic_scaling.maxpat" : 			{
 				"kind" : "patcher",
+				"local" : 1
+			}
+
+		}
+,
+		"data" : 		{
+			"devices.txt" : 			{
+				"kind" : "textfile",
 				"local" : 1
 			}
 
