@@ -3,8 +3,8 @@ inlets = 1;
 outlets = 3;
 ///
 
-var chordObj = {};
-var chordArray = [];
+var chordObj = {"-1": true};
+var chordArray = ["-1"];
 
 
 function msg_float(fl){
@@ -23,6 +23,7 @@ function emptyIt(){
 
   chordObj = {};
   chordArray = [];	
+  addNote("-1");
 }
 
 function msg_list(note, vel){
@@ -46,7 +47,9 @@ function getNoteFloat(fl){
   if(chordArray.length > 0){
     var index = Math.floor(chordArray.length * fl)
     index = index % chordArray.length;
-    outlet(2, parseInt(chordArray[index]));
+    if(parseInt(chordArray[index]) > 0){
+    	outlet(2, parseInt(chordArray[index]));
+	}
   }
 }
 
