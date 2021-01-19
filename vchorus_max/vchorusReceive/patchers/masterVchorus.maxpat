@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 1,
-			"revision" : 0,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 692.0, 144.0, 344.0, 480.0 ],
+		"rect" : [ 131.0, 103.0, 902.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,7 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
 					"id" : "obj-61",
@@ -125,7 +126,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 446.0, 77.0, 317.0, 24.0 ],
+					"patching_rect" : [ 449.0, 53.0, 317.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 120.0, 298.0, 315.0, 24.0 ],
 					"text" : "Start all instruments at scene 1"
@@ -143,7 +144,7 @@
 					"outlettype" : [ "bang" ],
 					"outlinecolor" : [ 0.786061465740204, 0.485019505023956, 0.792389512062073, 1.0 ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 418.0, 77.0, 24.0, 24.0 ],
+					"patching_rect" : [ 421.0, 53.0, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 63.0, 287.0, 46.0, 46.0 ]
 				}
@@ -155,7 +156,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 418.0, 116.0, 112.0, 22.0 ],
+					"patching_rect" : [ 421.0, 92.0, 112.0, 22.0 ],
 					"text" : "s globalstartscene1"
 				}
 
@@ -183,7 +184,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 184.0, 247.0, 280.0, 24.0 ],
+					"patching_rect" : [ 219.0, 247.0, 280.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 193.0, 241.0, 278.0, 24.0 ],
 					"text" : "click to open instrument 4"
@@ -198,7 +199,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 184.0, 208.0, 280.0, 24.0 ],
+					"patching_rect" : [ 219.0, 208.0, 280.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 193.0, 205.0, 278.0, 24.0 ],
 					"text" : "click to open instrument 3"
@@ -213,7 +214,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 184.0, 173.0, 280.0, 24.0 ],
+					"patching_rect" : [ 219.0, 173.0, 280.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 193.0, 170.0, 278.0, 24.0 ],
 					"text" : "click to open instrument 2"
@@ -228,7 +229,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 184.0, 135.0, 280.0, 24.0 ],
+					"patching_rect" : [ 219.0, 135.0, 280.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 193.0, 136.0, 278.0, 24.0 ],
 					"text" : "click to open instrument 1"
@@ -370,6 +371,13 @@
 				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/other",
 				"patcherrelativepath" : "../other",
 				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "serialPortIdentifier.maxpat",
+				"bootpath" : "~/Documents/Max/patches/MyTools",
+				"patcherrelativepath" : "../../../../../Max/patches/MyTools",
+				"type" : "JSON",
 				"implicit" : 1
 			}
  ],
