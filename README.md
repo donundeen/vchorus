@@ -1,3 +1,16 @@
+Welcome to VChorus
+---
+
+In this repository you'll find:
+- vchorus.js : nodejs code for capturing bluetooth data from Perifit devices
+- package.json : installation package 
+- package.json.rpi : insallation package.json file for raspberry pi (rename to package.json before runnning)
+- package.json.mac : installation package.json file for mac (rename to package.json before running)
+- vchorus_max/ : Max project and packages for VChorus, to run on a computer with the Max/MSP runtime (at least)
+- arduino/ : Arduino code, for running the bluetooth receiver on an arduino Feather ESP32 board, instead of a raspberry pi (one arduino per perifit, connected to the computer running Max/MSP via USB
+
+
+
 Installing on Mac:
 ---
 - [install node: https://nodejs.org/dist/latest-v10.x/node-v10.17.0.pkg]
