@@ -125,6 +125,8 @@ void sendOSCUDP(String deviceID, int lower, int upper){
   oscmsg.send(udp);
   udp.endPacket();
   oscmsg.empty();
+ }else{
+  Serial.println("not sending udp, not connected");
  }
   
 }
@@ -222,13 +224,15 @@ void setup() {
   // wifi config business
   Server.on("/", rootPage);
   Serial.println("done with Server.on");
-/*
+
+
+
   config.portalTimeout = 15000;  // It will time out in 60 seconds
   Portal.config(config);
   Portal.begin();
-*/
+
   
-  if (Portal.begin()) {
+  /*if (Portal.begin()) {
     Serial.println();
     Serial.println("HTTP server:" + WiFi.localIP().toString());
 
@@ -237,7 +241,7 @@ void setup() {
   }else{
     Serial.println("not portal.begin");
   }
-
+*/
       Serial.println("Starting Arduino BLE Client application...");
     BLEDevice::init("");
   
