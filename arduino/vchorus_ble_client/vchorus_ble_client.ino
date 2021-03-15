@@ -41,14 +41,15 @@ var deviceNames = {
 // here is broadcast address
 const char * UDPReceiverIP = "192.168.1.101"; // your pc ip
 const int UDPPort = 9002; //port server
+bool wifi_connected =false;
 
 //create UDP instance
 WiFiUDP udp;
 
-
 WebServer Server;
-
 AutoConnect      Portal(Server);
+AutoConnectConfig  config;
+
 
 void rootPage() {
   char content[] = "Hello, world";
@@ -103,6 +104,8 @@ static void notifyCallback(
 }
 
 
+
+// sending data over OSC/UDP.
 void sendOSCUDP(String deviceID, int lower, int upper){
   /* egs
    *  '/perifit/1', valueInt1, valueInt2, device.name);
@@ -110,6 +113,7 @@ void sendOSCUDP(String deviceID, int lower, int upper){
       28:ec:9a:14:2b:b3 u 1391
    *  
    */
+ if(WiFi.status() == WL_CONNECTED){   
   //send hello world to server
   char buffer[20];
   deviceID.toCharArray(buffer, 20);
@@ -121,6 +125,7 @@ void sendOSCUDP(String deviceID, int lower, int upper){
   oscmsg.send(udp);
   udp.endPacket();
   oscmsg.empty();
+ }
   
 }
 
@@ -211,17 +216,27 @@ void setup() {
 //  Serial.begin(115200);
   Serial.begin(9600);
   delay(1000);
+  Serial.println("setup");
 
 
   // wifi config business
   Server.on("/", rootPage);
+  Serial.println("done with Server.on");
+/*
+  config.portalTimeout = 15000;  // It will time out in 60 seconds
+  Portal.config(config);
+  Portal.begin();
+*/
+  
   if (Portal.begin()) {
+    Serial.println();
     Serial.println("HTTP server:" + WiFi.localIP().toString());
 
     // setup UDP:
       udp.begin(UDPPort);
-    
-  } 
+  }else{
+    Serial.println("not portal.begin");
+  }
 
       Serial.println("Starting Arduino BLE Client application...");
     BLEDevice::init("");
@@ -235,11 +250,21 @@ void setup() {
     pBLEScan->setWindow(449);
     pBLEScan->setActiveScan(true);
     pBLEScan->start(5, false);
-
-
-
  
 } // End of setup.
+
+void configUdp(){
+  if(!wifi_connected && WiFi.status() == WL_CONNECTED){
+    Serial.println("HTTP server:" + WiFi.localIP().toString());
+    wifi_connected = true;
+    udp.begin(UDPPort);
+  }
+  if(WiFi.status() != WL_CONNECTED){
+    Serial.println("wifi not connected");
+    wifi_connected = false;
+  }
+  
+}
 
 
 // This is the Arduino main loop function.
@@ -248,6 +273,7 @@ void loop() {
   // this handles the wifi config business:
   Portal.handleClient();
 
+  configUdp();
   
   // If the flag "doConnect" is true then we have scanned for and found the desired
   // BLE Server with which we wish to connect.  Now we connect to it.  Once we are 
