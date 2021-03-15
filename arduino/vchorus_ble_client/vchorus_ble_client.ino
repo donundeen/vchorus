@@ -1,3 +1,12 @@
+#include <SLIPEncodedSerial.h>
+#include <OSCData.h>
+#include <OSCBundle.h>
+#include <OSCBoards.h>
+#include <OSCTiming.h>
+#include <OSCMessage.h>
+#include <OSCMatch.h>
+#include <SLIPEncodedUSBSerial.h>
+
 /**
  * A BLE client example that is rich in capabilities.
  * There is a lot new capabilities implemented.
@@ -22,6 +31,30 @@ var deviceNames = {
 #include "BLEDevice.h"
 //#include "BLEScan.h"
 
+//#include <OSCMessage.h>
+#include <WiFi.h>
+#include <WebServer.h>
+#include <AutoConnect.h>
+
+// setting up UDP:
+// a network broadcast address
+// here is broadcast address
+const char * UDPReceiverIP = "192.168.1.101"; // your pc ip
+const int UDPPort = 9002; //port server
+
+//create UDP instance
+WiFiUDP udp;
+
+
+WebServer Server;
+
+AutoConnect      Portal(Server);
+
+void rootPage() {
+  char content[] = "Hello, world";
+  Server.send(200, "text/plain", content);
+}
+
 // The remote service we wish to connect to.
 //static BLEUUID serviceUUID("4fafc201-1fb5-459e-8fcc-c5c9c331914b");
 static BLEUUID serviceUUID("0000aa40-0000-1000-8000-00805f9b34fb");
@@ -35,6 +68,7 @@ static boolean doScan = false;
 static BLERemoteCharacteristic* pRemoteCharacteristic;
 static BLEAdvertisedDevice* myDevice;
 String deviceID= "";
+
 
 static void notifyCallback(
   BLERemoteCharacteristic* pBLERemoteCharacteristic,
@@ -55,6 +89,7 @@ static void notifyCallback(
     int lower = pData[0] * 256 + pData[1];
     String msgl = deviceID + " l " + String(lower);
     Serial.println(msgl);
+    
     /*
     Serial.println(pData[2]); //upper XXXX00000000
     Serial.println(pData[3]); // upper 0000XXXXXXXX
@@ -63,6 +98,30 @@ static void notifyCallback(
     String msgu = deviceID + " u " + String(upper);
     Serial.println(msgu);
 
+    sendOSCUDP(deviceID, lower, upper);
+
+}
+
+
+void sendOSCUDP(String deviceID, int lower, int upper){
+  /* egs
+   *  '/perifit/1', valueInt1, valueInt2, device.name);
+   *  28:ec:9a:14:2b:b3 l 180
+      28:ec:9a:14:2b:b3 u 1391
+   *  
+   */
+  //send hello world to server
+  char buffer[20];
+  deviceID.toCharArray(buffer, 20);
+  OSCMessage oscmsg("/perifit/1");  
+  oscmsg.add(lower).add(upper).add(buffer);
+   
+  udp.beginPacket(UDPReceiverIP, UDPPort);
+//  udp.write(buffer, msg.length()+1);
+  oscmsg.send(udp);
+  udp.endPacket();
+  oscmsg.empty();
+  
 }
 
 class MyClientCallback : public BLEClientCallbacks {
@@ -151,24 +210,45 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
 void setup() {
 //  Serial.begin(115200);
   Serial.begin(9600);
-  Serial.println("Starting Arduino BLE Client application...");
-  BLEDevice::init("");
+  delay(1000);
 
-  // Retrieve a Scanner and set the callback we want to use to be informed when we
-  // have detected a new device.  Specify that we want active scanning and start the
-  // scan to run for 5 seconds.
-  BLEScan* pBLEScan = BLEDevice::getScan();
-  pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
-  pBLEScan->setInterval(1349);
-  pBLEScan->setWindow(449);
-  pBLEScan->setActiveScan(true);
-  pBLEScan->start(5, false);
+
+  // wifi config business
+  Server.on("/", rootPage);
+  if (Portal.begin()) {
+    Serial.println("HTTP server:" + WiFi.localIP().toString());
+
+    // setup UDP:
+      udp.begin(UDPPort);
+    
+  } 
+
+      Serial.println("Starting Arduino BLE Client application...");
+    BLEDevice::init("");
+  
+    // Retrieve a Scanner and set the callback we want to use to be informed when we
+    // have detected a new device.  Specify that we want active scanning and start the
+    // scan to run for 5 seconds.
+    BLEScan* pBLEScan = BLEDevice::getScan();
+    pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
+    pBLEScan->setInterval(1349);
+    pBLEScan->setWindow(449);
+    pBLEScan->setActiveScan(true);
+    pBLEScan->start(5, false);
+
+
+
+ 
 } // End of setup.
 
 
 // This is the Arduino main loop function.
 void loop() {
 
+  // this handles the wifi config business:
+  Portal.handleClient();
+
+  
   // If the flag "doConnect" is true then we have scanned for and found the desired
   // BLE Server with which we wish to connect.  Now we connect to it.  Once we are 
   // connected we set the connected flag to be true.
