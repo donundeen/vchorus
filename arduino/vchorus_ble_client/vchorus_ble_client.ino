@@ -216,7 +216,8 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
 
 void setup() {
 //  Serial.begin(115200);
-  Serial.begin(9600);
+//  Serial.begin(9600);
+  Serial.begin(38400);
   delay(1000);
   Serial.println("setup");
 
