@@ -3,8 +3,9 @@ inlets = 1;
 outlets = 3;
 ///
 
-var chordObj = {"-1": true};
-var chordArray = ["-1"];
+var chordObj = {};
+//var chordArray = ["-1"];
+var chordArray = [];
 
 
 function msg_float(fl){
@@ -23,7 +24,7 @@ function emptyIt(){
 
   chordObj = {};
   chordArray = [];	
-  addNote("-1");
+//  addNote("-1");
 }
 
 function msg_list(note, vel){
