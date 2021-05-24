@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 140.0, 113.0, 909.0, 664.0 ],
+		"rect" : [ 73.0, 202.0, 909.0, 664.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -421,7 +421,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 911.5, 928.0, 153.0, 47.0 ],
+					"patching_rect" : [ 911.5, 928.0, 157.0, 47.0 ],
 					"text" : "manage menu for selecting devices by name and also getting the port"
 				}
 
@@ -1302,7 +1302,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-1",
-					"items" : [ "Select", "Port", ",", "Bluetooth-Incoming-Port", ",", "SLAB_USBtoUART", ",", "SLAB_USBtoUART20" ],
+					"items" : [ "Select", "Port", ",", "Bluetooth-Incoming-Port" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1862,9 +1862,9 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "" ],
-					"patching_rect" : [ 311.0, 461.64934397120669, 78.0, 22.0 ],
+					"patching_rect" : [ 311.0, 461.64934397120669, 84.0, 22.0 ],
 					"style" : "newobjYellow",
-					"text" : "serial b 9600"
+					"text" : "serial b 38400"
 				}
 
 			}
@@ -2534,6 +2534,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-365", 0 ],
+					"order" : 1,
+					"source" : [ "obj-389", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-385", 0 ],
+					"order" : 0,
 					"source" : [ "obj-389", 0 ]
 				}
 
@@ -3024,7 +3033,14 @@
 		"dependency_cache" : [ 			{
 				"name" : "uniqueList.jsfile",
 				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/other",
-				"patcherrelativepath" : "../../../htdocs/vchorus/vchorus_max/vchorusReceive/other",
+				"patcherrelativepath" : "../other",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "devices.txt",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/data",
+				"patcherrelativepath" : "../data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
