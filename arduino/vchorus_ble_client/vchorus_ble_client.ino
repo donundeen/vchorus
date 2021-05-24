@@ -7,6 +7,9 @@
 #include <OSCMatch.h>
 #include <SLIPEncodedUSBSerial.h>
 
+// note: this app is close to too large. Try using partition scheme without OTA
+
+
 /**
  * A BLE client example that is rich in capabilities.
  * There is a lot new capabilities implemented.
@@ -99,7 +102,7 @@ static void notifyCallback(
     String msgu = deviceID + " u " + String(upper);
     Serial.println(msgu);
 
-    sendOSCUDP(deviceID, lower, upper);
+//sendOSCUDP(deviceID, lower, upper);
 
 }
 
