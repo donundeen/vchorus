@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 136.0, 127.0, 841.0, 705.0 ],
+		"rect" : [ 738.0, 131.0, 1166.0, 705.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -46,7 +46,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 157.0, 1275.0, 83.0, 22.0 ],
-					"text" : "-0.0011"
+					"text" : "-0.044704"
 				}
 
 			}
@@ -3792,7 +3792,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-94",
-					"items" : [ "Select", "RPi", "Device...", ",", "oak" ],
+					"items" : [ "Select", "RPi", "Device...", ",", "elm", ",", "oak" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -3885,6 +3885,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-90",
+					"int" : 1,
 					"maxclass" : "gswitch",
 					"numinlets" : 3,
 					"numoutlets" : 1,
