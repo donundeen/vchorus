@@ -9,6 +9,10 @@
 
 // note: this app is close to too large. Try using partition scheme without OTA
 
+const boolean OSC_MODE_ON = true;
+const boolean DELETE_SSIDS = false;
+//const char * UDPReceiverIP = "192.168.1.101"; // ip where UDP messages are going
+const char * UDPReceiverIP = "192.168.1.126"; // ip where UDP messages are going
 
 /**
  * A BLE client example that is rich in capabilities.
@@ -35,14 +39,20 @@ var deviceNames = {
 //#include "BLEScan.h"
 
 //#include <OSCMessage.h>
+
+// based on docs here: https://hieromon.github.io/AutoConnect/gettingstarted.html 
 #include <WiFi.h>
 #include <WebServer.h>
 #include <AutoConnect.h>
 
+//const char *WIFI_SSID = "PILGRIMAGE_25";
+//const char *WIFI_PASSWORD = "";
+
+
 // setting up UDP:
 // a network broadcast address
 // here is broadcast address
-const char * UDPReceiverIP = "192.168.1.101"; // your pc ip
+
 const int UDPPort = 9002; //port server
 bool wifi_connected =false;
 
@@ -54,10 +64,34 @@ AutoConnect      Portal(Server);
 AutoConnectConfig  config;
 
 
+
 void rootPage() {
   char content[] = "Hello, world";
   Server.send(200, "text/plain", content);
 }
+
+
+void deleteAllCredentials(void) {
+  Serial.println("deleting all stored SSID credentials");
+  AutoConnectCredential credential2;
+  boolean result;
+  
+  result = credential2.del((const char*)"GuestNet");
+  Serial.println(result);
+
+  station_config_t config2;
+  uint8_t ent = credential2.entries();
+  Serial.print("Num SSIDS: ");
+  Serial.println(ent);
+
+  while (ent--) {
+    credential2.load((int8_t)0, &config2);
+    Serial.println((const char*)&config2.ssid[0]);
+    result = credential2.del((const char*)&config2.ssid[0]);
+    Serial.println(result);
+  }
+}
+
 
 // The remote service we wish to connect to.
 //static BLEUUID serviceUUID("4fafc201-1fb5-459e-8fcc-c5c9c331914b");
@@ -67,6 +101,8 @@ static BLEUUID serviceUUID("0000aa40-0000-1000-8000-00805f9b34fb");
 static BLEUUID    charUUID("0000aa41-0000-1000-8000-00805f9b34fb");
 
 static boolean doConnect = false;
+
+// make sure to set OSC_MODE_ON to true to enable sending OSC over wifi
 static boolean connected = false;
 static boolean doScan = false;
 static BLERemoteCharacteristic* pRemoteCharacteristic;
@@ -102,8 +138,10 @@ static void notifyCallback(
     String msgu = deviceID + " u " + String(upper);
     Serial.println(msgu);
 
-//sendOSCUDP(deviceID, lower, upper);
 
+    if(OSC_MODE_ON){
+      sendOSCUDP(deviceID, lower, upper);
+    }
 }
 
 
@@ -217,6 +255,22 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
 }; // MyAdvertisedDeviceCallbacks
 
 
+void configUdp(){
+  if(!wifi_connected && WiFi.status() == WL_CONNECTED){
+    Serial.println("HTTP server:" + WiFi.localIP().toString());
+    Serial.println("SSID:" + WiFi.SSID());
+    wifi_connected = true;
+    udp.begin(UDPPort);
+  }
+  if(WiFi.status() != WL_CONNECTED){
+    Serial.println("wifi not connected");
+    wifi_connected = false;
+  }
+  
+}
+
+
+
 void setup() {
 //  Serial.begin(115200);
 //  Serial.begin(9600);
@@ -225,16 +279,22 @@ void setup() {
   Serial.println("setup");
 
 
-  // wifi config business
-  Server.on("/", rootPage);
-  Serial.println("done with Server.on");
+
+  Serial.print("ESP Board MAC Address:  ");
+  Serial.println(WiFi.macAddress());
 
 
-
-  config.portalTimeout = 15000;  // It will time out in 60 seconds
-  Portal.config(config);
-  Portal.begin();
-
+  if(!DELETE_SSIDS){
+    // wifi config business
+    Server.on("/", rootPage);
+    Serial.println("done with Server.on");
+      
+    config.portalTimeout = 15000;  // It will time out in 15 seconds
+    Portal.config(config);
+    Portal.begin();
+  }else{
+    deleteAllCredentials();
+  }
   
   /*if (Portal.begin()) {
     Serial.println();
@@ -260,19 +320,6 @@ void setup() {
     pBLEScan->start(5, false);
  
 } // End of setup.
-
-void configUdp(){
-  if(!wifi_connected && WiFi.status() == WL_CONNECTED){
-    Serial.println("HTTP server:" + WiFi.localIP().toString());
-    wifi_connected = true;
-    udp.begin(UDPPort);
-  }
-  if(WiFi.status() != WL_CONNECTED){
-    Serial.println("wifi not connected");
-    wifi_connected = false;
-  }
-  
-}
 
 
 // This is the Arduino main loop function.
