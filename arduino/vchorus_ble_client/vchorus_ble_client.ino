@@ -12,7 +12,8 @@
 const boolean OSC_MODE_ON = true;
 const boolean DELETE_SSIDS = false;
 //const char * UDPReceiverIP = "192.168.1.101"; // ip where UDP messages are going
-const char * UDPReceiverIP = "192.168.1.126"; // ip where UDP messages are going
+//const char * UDPReceiverIP = "192.168.1.126"; // ip where UDP messages are going
+const char * UDPReceiverIP = "192.168.1.138"; // ip where UDP messages are going
 
 /**
  * A BLE client example that is rich in capabilities.
