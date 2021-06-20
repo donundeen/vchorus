@@ -1,8 +1,8 @@
 {
 	"name" : "vchorusReceive",
 	"version" : 1,
-	"creationdate" : 2082826314,
-	"modificationdate" : 3693912132,
+	"creationdate" : 2082826193,
+	"modificationdate" : 3707055097,
 	"viewrect" : [ 25.0, 104.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -16,6 +16,11 @@
 				"toplevel" : 1
 			}
 ,
+			"dynamic_scaling.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+,
 			"serialPortIdentifier.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
@@ -27,11 +32,6 @@
 			}
 ,
 			"testSerialFromPerifit.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"dynamic_scaling.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
