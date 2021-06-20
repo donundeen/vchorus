@@ -5,6 +5,7 @@
  * Required libraries to install in the arduino IDE (use the Library Manager to find and install):
  * https://github.com/Hieromon/PageBuilder : PageBuilder
  * https://github.com/bblanchon/ArduinoJson : ArduinoJson
+ * https://github.com/CNMAT/OSC : OSC
  * AutoConnect: https://hieromon.github.io/AutoConnect/index.html : instructions on how to install are here: 
  * follow the instructions under "Install the AutoConnect" if you can't just find it in the Library Manager
  */
@@ -50,12 +51,13 @@ const boolean OSC_MODE_ON = true;
     Also set HARDCODE_SSID = true
 */
 const boolean HARDCODE_SSID = true;
+/*
 const char *WIFI_SSID = "Hot Fuzz Ext";
 const char *WIFI_PASSWORD = "nanobot706";
-/*
+*/
 const char *WIFI_SSID = "vchorus";
 const char *WIFI_PASSWORD = "vchorus123";
-*/
+
 
 
 /*
