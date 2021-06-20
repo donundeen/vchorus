@@ -1,5 +1,6 @@
 
 // this repo at: https://github.com/donundeen/vchorus 
+// read the README for starters
 
 /*
  * Required libraries to install in the arduino IDE (use the Library Manager to find and install):
