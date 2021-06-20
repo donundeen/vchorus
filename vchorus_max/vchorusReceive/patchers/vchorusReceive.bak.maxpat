@@ -40,21 +40,6 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-528",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 153.0, 254.0, 150.0, 33.0 ],
-					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 158.0, 234.0, 104.0, 33.0 ],
-					"text" : "click here to reset calibration"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-531",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -10898,8 +10883,8 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "dynamic_scaling_2.maxpat",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
-				"patcherrelativepath" : ".",
+				"bootpath" : "~/Documents/Max 8/Patches/MyTools",
+				"patcherrelativepath" : "../../../../../Max 8/Patches/MyTools",
 				"type" : "JSON",
 				"implicit" : 1
 			}
