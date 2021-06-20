@@ -1,3 +1,15 @@
+
+// this repo at: https://github.com/donundeen/vchorus 
+
+/*
+ * Required libraries to install in the arduino IDE (use the Library Manager to find and install):
+ * https://github.com/Hieromon/PageBuilder : PageBuilder
+ * https://github.com/bblanchon/ArduinoJson : ArduinoJson
+ * AutoConnect: https://hieromon.github.io/AutoConnect/index.html : instructions on how to install are here: 
+ * follow the instructions under "Install the AutoConnect" if you can't just find it in the Library Manager
+ */
+
+// this is all the OSC libraries
 #include <SLIPEncodedSerial.h>
 #include <OSCData.h>
 #include <OSCBundle.h>
@@ -7,13 +19,80 @@
 #include <OSCMatch.h>
 #include <SLIPEncodedUSBSerial.h>
 
+
+// these the libraries for connecting to WiFi
+// based on docs here: https://hieromon.github.io/AutoConnect/gettingstarted.html 
+#include <WiFi.h>
+#include <WebServer.h>
+#include <AutoConnect.h>
+
+// bluetooth libraries
+#include "BLEDevice.h"
+
+
+
 // note: this app is close to too large. Try using partition scheme without OTA
 
+/* 
+ *  OSC_MODE_ON set to true to send osc data over WIFI.
+ *  When this is true: 
+ *  -- if the arduino can't connect to wifi, it will create its own AP, named esp32_ap (pw 12345678)
+ *  -- you'll need to connect to that SSID via your phone, and use the interface that pops up on your phone 
+ *     to configure the SSID and PW of the router you want to connect to
+ *  When OSC_MODE_ON = false, you need the arduino connected to the laptop, 
+ *  and it will send data over serial USB
+ */
 const boolean OSC_MODE_ON = true;
+
+
+/* if we aren't using the auto-configuration process, 
+    and we want to hard-code the router's SSID and password here.
+    Also set HARDCODE_SSID = true
+*/
+const boolean HARDCODE_SSID = true;
+const char *WIFI_SSID = "Hot Fuzz Ext";
+const char *WIFI_PASSWORD = "nanobot706";
+/*
+const char *WIFI_SSID = "vchorus";
+const char *WIFI_PASSWORD = "vchorus123";
+*/
+
+
+/*
+ * once you've figured out the IP address (on the same router the arduinos are connecting to)
+ * of the laptop running max, set that IP here.
+ * 
+ */
+const char * UDPReceiverIP = "192.168.1.138"; // ip where UDP messages are going
+const int UDPPort = 9002; // the UDP port that Max is listening on
+
+
+
+/*
+ * Sometimes we need to delete the SSIDs that are stored in the config of the arduino.
+ * Set this value to TRUE and rerun the arduino, to remove all the stored SSIDs 
+ * (aka clear the configuration storage). 
+ * Then set it badk to false to start saving new SSID/Passwords
+ * 
+ */
 const boolean DELETE_SSIDS = false;
 //const char * UDPReceiverIP = "192.168.1.101"; // ip where UDP messages are going
 //const char * UDPReceiverIP = "192.168.1.126"; // ip where UDP messages are going
-const char * UDPReceiverIP = "192.168.1.138"; // ip where UDP messages are going
+
+/*
+ * Information about the kind of Bluetooth device we're connecting to
+ */
+// The remote service we wish to connect to.
+//static BLEUUID serviceUUID("4fafc201-1fb5-459e-8fcc-c5c9c331914b");
+static BLEUUID serviceUUID("0000aa40-0000-1000-8000-00805f9b34fb");
+// The characteristic of the remote service we are interested in.
+//static BLEUUID    charUUID("beb5483e-36e1-4688-b7f5-ea07361b26a8");
+static BLEUUID    charUUID("0000aa41-0000-1000-8000-00805f9b34fb");
+
+
+
+
+
 
 /**
  * A BLE client example that is rich in capabilities.
@@ -36,40 +115,42 @@ var deviceNames = {
 
  */
 
-#include "BLEDevice.h"
-//#include "BLEScan.h"
-
-//#include <OSCMessage.h>
-
-// based on docs here: https://hieromon.github.io/AutoConnect/gettingstarted.html 
-#include <WiFi.h>
-#include <WebServer.h>
-#include <AutoConnect.h>
-
-//const char *WIFI_SSID = "PILGRIMAGE_25";
-//const char *WIFI_PASSWORD = "";
 
 
-// setting up UDP:
-// a network broadcast address
-// here is broadcast address
-
-const int UDPPort = 9002; //port server
 bool wifi_connected =false;
 
 //create UDP instance
 WiFiUDP udp;
 
+
+// wifi autoconnect code
 WebServer Server;
 AutoConnect      Portal(Server);
 AutoConnectConfig  config;
 
 
 
+
+
+
+
+
+
+static boolean doConnect = false;
+
+// make sure to set OSC_MODE_ON to true to enable sending OSC over wifi
+static boolean connected = false;
+static boolean doScan = false;
+static BLERemoteCharacteristic* pRemoteCharacteristic;
+static BLEAdvertisedDevice* myDevice;
+String deviceID= "";
+
+
 void rootPage() {
   char content[] = "Hello, world";
   Server.send(200, "text/plain", content);
 }
+
 
 
 void deleteAllCredentials(void) {
@@ -94,23 +175,9 @@ void deleteAllCredentials(void) {
 }
 
 
-// The remote service we wish to connect to.
-//static BLEUUID serviceUUID("4fafc201-1fb5-459e-8fcc-c5c9c331914b");
-static BLEUUID serviceUUID("0000aa40-0000-1000-8000-00805f9b34fb");
-// The characteristic of the remote service we are interested in.
-//static BLEUUID    charUUID("beb5483e-36e1-4688-b7f5-ea07361b26a8");
-static BLEUUID    charUUID("0000aa41-0000-1000-8000-00805f9b34fb");
-
-static boolean doConnect = false;
-
-// make sure to set OSC_MODE_ON to true to enable sending OSC over wifi
-static boolean connected = false;
-static boolean doScan = false;
-static BLERemoteCharacteristic* pRemoteCharacteristic;
-static BLEAdvertisedDevice* myDevice;
-String deviceID= "";
-
-
+/*
+ * This code gets the value from the perifit, and sends it on over serial/usb and/or wifi/OSC
+ */
 static void notifyCallback(
   BLERemoteCharacteristic* pBLERemoteCharacteristic,
   uint8_t* pData,
@@ -173,6 +240,10 @@ void sendOSCUDP(String deviceID, int lower, int upper){
   
 }
 
+
+/*
+ * Code for handling BLE connection
+ */
 class MyClientCallback : public BLEClientCallbacks {
   void onConnect(BLEClient* pclient) {
   }
@@ -256,6 +327,12 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
 }; // MyAdvertisedDeviceCallbacks
 
 
+
+
+
+/*
+ * connecting to UDP port on laptop runnin Max
+ */
 void configUdp(){
   if(!wifi_connected && WiFi.status() == WL_CONNECTED){
     Serial.println("HTTP server:" + WiFi.localIP().toString());
@@ -286,13 +363,30 @@ void setup() {
 
 
   if(!DELETE_SSIDS){
-    // wifi config business
-    Server.on("/", rootPage);
-    Serial.println("done with Server.on");
+
+
+      // wifi config business
+
+    if(HARDCODE_SSID){
+      Serial.println("connecting to hardcoded SSID");
+      Serial.println(WIFI_SSID);
+      Serial.println(WIFI_PASSWORD);
       
-    config.portalTimeout = 15000;  // It will time out in 15 seconds
-    Portal.config(config);
-    Portal.begin();
+      WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+      while (WiFi.status() != WL_CONNECTED) {
+        // wifi status codes: https://realglitch.com/2018/07/arduino-wifi-status-codes/
+        delay(1000);
+        Serial.print(".");
+        Serial.print(WiFi.status());
+        Serial.print(WL_CONNECTED);
+      }
+    }else{
+      Server.on("/", rootPage);
+      Serial.println("done with Server.on");  
+      config.portalTimeout = 15000;  // It will time out in 15 seconds
+      Portal.config(config);
+      Portal.begin();
+    }
   }else{
     deleteAllCredentials();
   }
@@ -357,3 +451,52 @@ void loop() {
   
   delay(1000); // Delay a second between loops.
 } // End of loop
+
+
+
+void hardcode_ssid(){
+  Serial.println("hard-coding SSID and password");
+  AutoConnectCredential credt;
+  station_config_t apConfig;
+  memset(&apConfig, 0x00, sizeof(apConfig));  // For DHCP
+
+  // Put SSID
+  strncpy((char*)apConfig.ssid, WIFI_SSID, sizeof(apConfig.ssid));
+
+  // Put Password
+  strncpy((char*)apConfig.password, WIFI_PASSWORD, sizeof(apConfig.password));
+
+  // Put BSSID value of your SSID:
+  // You must set the correct value of BSSID to match the specified SSID.
+  // If you don't, the AutoConnect can't establish to the SSID.
+  apConfig.bssid[0] = WIFI_SSID[0]; // Change the correct value
+  apConfig.bssid[1] = WIFI_SSID[1]; // Change the correct value
+  apConfig.bssid[2] = WIFI_SSID[2]; // Change the correct value
+  apConfig.bssid[3] = WIFI_SSID[3]; // Change the correct value
+  apConfig.bssid[4] = WIFI_SSID[4]; // Change the correct value
+  apConfig.bssid[5] = WIFI_SSID[5]; // Change the correct value
+  apConfig.bssid[6] = WIFI_SSID[6]; // Change the correct value
+  apConfig.bssid[7] = WIFI_SSID[7]; // Change the correct value
+  apConfig.bssid[8] = WIFI_SSID[8]; // Change the correct value
+  apConfig.bssid[9] = WIFI_SSID[9]; // Change the correct value
+  apConfig.bssid[10] = WIFI_SSID[10]; // Change the correct value
+  apConfig.bssid[11] = WIFI_SSID[11]; // Change the correct value
+  apConfig.bssid[12] = WIFI_SSID[12]; // Change the correct value
+  apConfig.bssid[13] = WIFI_SSID[13]; // Change the correct value
+  apConfig.bssid[14] = WIFI_SSID[14]; // Change the correct value
+  
+  /*
+  apConfig.bssid[0] = 0x??; // Change the correct value
+  apConfig.bssid[1] = 0x??; // Change the correct value
+  apConfig.bssid[2] = 0x??; // Change the correct value
+  apConfig.bssid[3] = 0x??; // Change the correct value
+  apConfig.bssid[4] = 0x??; // Change the correct value
+  apConfig.bssid[5] = 0x??; // Change the correct value
+  */
+
+  if (credt.save(&apConfig))
+    Serial.println("Ok");
+  else
+    Serial.println("Save error");
+  
+}
