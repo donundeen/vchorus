@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 83.0, 87.0, 816.0, 705.0 ],
+		"rect" : [ 83.0, 87.0, 1123.0, 705.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,56 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-463",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 3502.0, 1855.5, 58.0, 22.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-477",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 3426.0, 1888.0, 93.0, 22.0 ],
+					"text" : "read devices.txt"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-503",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 766.0, 20.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 766.0, 20.0, 150.0, 20.0 ],
+					"text" : "WIFI Connected Devices"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-476",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 309.0, 26.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 309.0, 26.0, 150.0, 20.0 ],
+					"text" : "USB Connected Devices"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-600",
 					"maxclass" : "message",
@@ -612,7 +662,7 @@
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 2674.5, -32.0, 376.0, 29.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 289.42859935760498, 10.955671191215515, 376.0, 58.044328808784485 ],
+					"presentation_rect" : [ 298.0, 43.955671191215515, 376.0, 58.044328808784485 ],
 					"viewvisibility" : 1
 				}
 
@@ -862,7 +912,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 3278.0, 1755.0, 109.0, 35.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 890.5, 38.082442879676819, 145.0, 22.0 ],
+					"presentation_rect" : [ 899.07140064239502, 71.082442879676819, 145.0, 22.0 ],
 					"text" : "reload load device names"
 				}
 
@@ -877,7 +927,7 @@
 					"patching_rect" : [ 3345.0, 1842.0, 150.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 939.439524292945862, 5.455671191215515, 150.0, 33.0 ],
+					"presentation_rect" : [ 948.010924935340881, 38.455671191215515, 150.0, 33.0 ],
 					"text" : "edit list of devices and their names"
 				}
 
@@ -903,7 +953,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 3348.524604320526123, 1879.0, 35.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 890.5, 10.955671191215515, 35.0, 22.0 ],
+					"presentation_rect" : [ 899.07140064239502, 43.955671191215515, 35.0, 22.0 ],
 					"text" : "open"
 				}
 
@@ -3664,7 +3714,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 3071.0, 1160.0, 72.0, 35.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 715.5, 16.082442879676819, 99.0, 22.0 ],
+					"presentation_rect" : [ 724.07140064239502, 49.082442879676819, 99.0, 22.0 ],
 					"text" : "Clear Device List"
 				}
 
@@ -3784,8 +3834,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 3061.524604320526123, 1578.933708906173706, 158.0, 22.0 ],
-					"text" : "append Select RPi Device..."
+					"patching_rect" : [ 3061.524604320526123, 1578.933708906173706, 163.0, 22.0 ],
+					"text" : "append Select WiFi Device..."
 				}
 
 			}
@@ -3804,7 +3854,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-94",
-					"items" : [ "Select", "RPi", "Device...", ",", "elm", ",", "oak" ],
+					"items" : [ "Select", "WiFi", "Device..." ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -3812,7 +3862,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 2973.0, 1649.975319385528564, 222.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 715.5, 38.082442879676819, 173.0, 22.0 ]
+					"presentation_rect" : [ 724.07140064239502, 71.082442879676819, 173.0, 22.0 ]
 				}
 
 			}
@@ -6494,7 +6544,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 771.0, 12.75, 150.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 156.0, 40.0, 113.0, 20.0 ],
+					"presentation_rect" : [ 318.0, 110.0, 113.0, 20.0 ],
 					"text" : "Use Fake input"
 				}
 
@@ -6556,7 +6606,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 727.25, 12.75, 42.0, 42.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 136.0, 40.0, 20.0, 20.0 ]
+					"presentation_rect" : [ 298.0, 110.0, 20.0, 20.0 ]
 				}
 
 			}
@@ -9888,6 +9938,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-477", 0 ],
+					"source" : [ "obj-463", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-480", 0 ],
 					"order" : 1,
 					"source" : [ "obj-464", 0 ]
@@ -9906,6 +9963,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-464", 0 ],
 					"source" : [ "obj-469", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-464", 0 ],
+					"source" : [ "obj-477", 0 ]
 				}
 
 			}

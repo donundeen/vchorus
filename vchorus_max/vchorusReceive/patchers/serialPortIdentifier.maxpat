@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 1,
-			"revision" : 5,
+			"revision" : 11,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 73.0, 202.0, 909.0, 664.0 ],
+		"rect" : [ 504.0, 207.0, 699.0, 664.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,30 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 286.0, 124.0, 58.0, 22.0 ],
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 312.0, 165.0, 93.0, 22.0 ],
+					"text" : "read devices.txt"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-73",
 					"maxclass" : "newobj",
@@ -457,7 +481,7 @@
 , 			{
 				"box" : 				{
 					"coll_data" : 					{
-						"count" : 2,
+						"count" : 5,
 						"data" : [ 							{
 								"key" : 1,
 								"value" : [ "28:ec:9a:15:19:29", "elm" ]
@@ -465,6 +489,18 @@
 , 							{
 								"key" : 2,
 								"value" : [ "28:ec:9a:14:2b:b3", "oak" ]
+							}
+, 							{
+								"key" : 3,
+								"value" : [ "28:ec:9a:15:05:f3", "bird" ]
+							}
+, 							{
+								"key" : 4,
+								"value" : [ "b4:52:a9:bf:0b:30", "basil" ]
+							}
+, 							{
+								"key" : 5,
+								"value" : [ "b4:52:a9:be:fd:cc", "rosemary" ]
 							}
  ]
 					}
@@ -474,7 +510,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 222.524604320526123, 107.85065602879331, 71.0, 22.0 ],
+					"patching_rect" : [ 222.524604320526123, 200.85065602879331, 71.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 1,
 						"precision" : 6
@@ -1302,7 +1338,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-1",
-					"items" : [ "Select", "Port", ",", "Bluetooth-Incoming-Port" ],
+					"items" : [ "Select", "Port", ",", "wlan-debug", ",", "debug-console", ",", "Bluetooth-Incoming-Port", ",", "usbserial-01F4EB6D" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -1561,7 +1597,7 @@
 , 			{
 				"box" : 				{
 					"coll_data" : 					{
-						"count" : 2,
+						"count" : 5,
 						"data" : [ 							{
 								"key" : 1,
 								"value" : [ "28:ec:9a:15:19:29", "elm" ]
@@ -1569,6 +1605,18 @@
 , 							{
 								"key" : 2,
 								"value" : [ "28:ec:9a:14:2b:b3", "oak" ]
+							}
+, 							{
+								"key" : 3,
+								"value" : [ "28:ec:9a:15:05:f3", "bird" ]
+							}
+, 							{
+								"key" : 4,
+								"value" : [ "b4:52:a9:bf:0b:30", "basil" ]
+							}
+, 							{
+								"key" : 5,
+								"value" : [ "b4:52:a9:be:fd:cc", "rosemary" ]
 							}
  ]
 					}
@@ -2019,8 +2067,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1049.524604320526123, 1319.933708906173706, 169.0, 22.0 ],
-					"text" : "append Select Serial Device..."
+					"patching_rect" : [ 1049.524604320526123, 1319.933708906173706, 197.0, 22.0 ],
+					"text" : "append Select Serial/USB Device..."
 				}
 
 			}
@@ -2316,6 +2364,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-139", 0 ],
+					"source" : [ "obj-20", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-395", 0 ],
 					"source" : [ "obj-21", 0 ]
 				}
@@ -2325,6 +2380,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-67", 0 ],
 					"source" : [ "obj-212", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-20", 0 ],
+					"source" : [ "obj-22", 0 ]
 				}
 
 			}
