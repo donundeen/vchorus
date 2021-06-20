@@ -35,15 +35,15 @@
 // note: this app is close to too large. Try using partition scheme without OTA
 
 /* 
- *  OSC_MODE_ON set to true to send osc data over WIFI.
+ *  WIFI_MODE_ON set to true to send osc data over WIFI.
  *  When this is true: 
  *  -- if the arduino can't connect to wifi, it will create its own AP, named esp32_ap (pw 12345678)
  *  -- you'll need to connect to that SSID via your phone, and use the interface that pops up on your phone 
  *     to configure the SSID and PW of the router you want to connect to
- *  When OSC_MODE_ON = false, you need the arduino connected to the laptop, 
+ *  When WIFI_MODE_ON = false, you need the arduino connected to the laptop, 
  *  and it will send data over serial USB
  */
-const boolean OSC_MODE_ON = true;
+const boolean WIFI_MODE_ON = true;
 
 
 /* if we aren't using the auto-configuration process, 
@@ -51,13 +51,14 @@ const boolean OSC_MODE_ON = true;
     Also set HARDCODE_SSID = true
 */
 const boolean HARDCODE_SSID = true;
-/*
+
 const char *WIFI_SSID = "Hot Fuzz Ext";
 const char *WIFI_PASSWORD = "nanobot706";
-*/
+
+/*
 const char *WIFI_SSID = "vchorus";
 const char *WIFI_PASSWORD = "vchorus123";
-
+*/
 
 
 /*
@@ -65,7 +66,8 @@ const char *WIFI_PASSWORD = "vchorus123";
  * of the laptop running max, set that IP here.
  * 
  */
-const char * UDPReceiverIP = "192.168.1.138"; // ip where UDP messages are going
+//const char * UDPReceiverIP = "192.168.1.138"; // ip where UDP messages are going
+const char * UDPReceiverIP = "192.168.1.106"; // ip where UDP messages are going
 const int UDPPort = 9002; // the UDP port that Max is listening on
 
 
@@ -140,7 +142,7 @@ AutoConnectConfig  config;
 
 static boolean doConnect = false;
 
-// make sure to set OSC_MODE_ON to true to enable sending OSC over wifi
+// make sure to set WIFI_MODE_ON to true to enable sending OSC over wifi
 static boolean connected = false;
 static boolean doScan = false;
 static BLERemoteCharacteristic* pRemoteCharacteristic;
@@ -209,7 +211,7 @@ static void notifyCallback(
     Serial.println(msgu);
 
 
-    if(OSC_MODE_ON){
+    if(WIFI_MODE_ON){
       sendOSCUDP(deviceID, lower, upper);
     }
 }
@@ -364,33 +366,37 @@ void setup() {
   Serial.println(WiFi.macAddress());
 
 
-  if(!DELETE_SSIDS){
+
+  if(WIFI_MODE_ON){
+    if(!DELETE_SSIDS){
 
 
       // wifi config business
 
-    if(HARDCODE_SSID){
-      Serial.println("connecting to hardcoded SSID");
-      Serial.println(WIFI_SSID);
-      Serial.println(WIFI_PASSWORD);
-      
-      WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-      while (WiFi.status() != WL_CONNECTED) {
-        // wifi status codes: https://realglitch.com/2018/07/arduino-wifi-status-codes/
-        delay(1000);
-        Serial.print(".");
-        Serial.print(WiFi.status());
-        Serial.print(WL_CONNECTED);
+    
+      if(HARDCODE_SSID){
+        Serial.println("connecting to hardcoded SSID");
+        Serial.println(WIFI_SSID);
+        Serial.println(WIFI_PASSWORD);
+        
+        WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+        while (WiFi.status() != WL_CONNECTED) {
+          // wifi status codes: https://realglitch.com/2018/07/arduino-wifi-status-codes/
+          delay(1000);
+          Serial.print(".");
+          Serial.print(WiFi.status());
+          Serial.print(WL_CONNECTED);
+        }
+      }else{
+        Server.on("/", rootPage);
+        Serial.println("done with Server.on");  
+        config.portalTimeout = 15000;  // It will time out in 15 seconds
+        Portal.config(config);
+        Portal.begin();
       }
     }else{
-      Server.on("/", rootPage);
-      Serial.println("done with Server.on");  
-      config.portalTimeout = 15000;  // It will time out in 15 seconds
-      Portal.config(config);
-      Portal.begin();
+      deleteAllCredentials();
     }
-  }else{
-    deleteAllCredentials();
   }
   
   /*if (Portal.begin()) {
@@ -453,52 +459,3 @@ void loop() {
   
   delay(1000); // Delay a second between loops.
 } // End of loop
-
-
-
-void hardcode_ssid(){
-  Serial.println("hard-coding SSID and password");
-  AutoConnectCredential credt;
-  station_config_t apConfig;
-  memset(&apConfig, 0x00, sizeof(apConfig));  // For DHCP
-
-  // Put SSID
-  strncpy((char*)apConfig.ssid, WIFI_SSID, sizeof(apConfig.ssid));
-
-  // Put Password
-  strncpy((char*)apConfig.password, WIFI_PASSWORD, sizeof(apConfig.password));
-
-  // Put BSSID value of your SSID:
-  // You must set the correct value of BSSID to match the specified SSID.
-  // If you don't, the AutoConnect can't establish to the SSID.
-  apConfig.bssid[0] = WIFI_SSID[0]; // Change the correct value
-  apConfig.bssid[1] = WIFI_SSID[1]; // Change the correct value
-  apConfig.bssid[2] = WIFI_SSID[2]; // Change the correct value
-  apConfig.bssid[3] = WIFI_SSID[3]; // Change the correct value
-  apConfig.bssid[4] = WIFI_SSID[4]; // Change the correct value
-  apConfig.bssid[5] = WIFI_SSID[5]; // Change the correct value
-  apConfig.bssid[6] = WIFI_SSID[6]; // Change the correct value
-  apConfig.bssid[7] = WIFI_SSID[7]; // Change the correct value
-  apConfig.bssid[8] = WIFI_SSID[8]; // Change the correct value
-  apConfig.bssid[9] = WIFI_SSID[9]; // Change the correct value
-  apConfig.bssid[10] = WIFI_SSID[10]; // Change the correct value
-  apConfig.bssid[11] = WIFI_SSID[11]; // Change the correct value
-  apConfig.bssid[12] = WIFI_SSID[12]; // Change the correct value
-  apConfig.bssid[13] = WIFI_SSID[13]; // Change the correct value
-  apConfig.bssid[14] = WIFI_SSID[14]; // Change the correct value
-  
-  /*
-  apConfig.bssid[0] = 0x??; // Change the correct value
-  apConfig.bssid[1] = 0x??; // Change the correct value
-  apConfig.bssid[2] = 0x??; // Change the correct value
-  apConfig.bssid[3] = 0x??; // Change the correct value
-  apConfig.bssid[4] = 0x??; // Change the correct value
-  apConfig.bssid[5] = 0x??; // Change the correct value
-  */
-
-  if (credt.save(&apConfig))
-    Serial.println("Ok");
-  else
-    Serial.println("Save error");
-  
-}

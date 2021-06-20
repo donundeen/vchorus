@@ -92,3 +92,8 @@ Installing on RPI:
 - ctrl-c to cancel any code running in the terminal on the RPI
 - sudo node vchorus.js
 
+
+
+# Git Command to commit all changes
+
+`cd /Users/donundeen/Documents/htdocs/vchorus;  git pull; git  add --all ; git commit -m"new updates" ;  git push`
