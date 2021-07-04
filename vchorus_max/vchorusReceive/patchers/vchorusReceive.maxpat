@@ -40,6 +40,19 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-686",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 934.666694521903992, 177.333338618278503, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 922.666694164276123, 157.0, 150.0, 20.0 ],
+					"text" : "midi keyboard input"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-681",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -177,6 +190,8 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "int", "int" ],
 					"patching_rect" : [ 3763.48354172706604, -67.333333611488342, 41.0, 22.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 877.0, 157.0, 41.0, 22.0 ],
 					"text" : "notein"
 				}
 
