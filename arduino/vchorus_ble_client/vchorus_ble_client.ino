@@ -44,7 +44,7 @@
  *  When WIFI_MODE_ON = false, you need the arduino connected to the laptop, 
  *  and it will send data over serial USB
  */
-const boolean WIFI_MODE_ON = true;
+const boolean WIFI_MODE_ON = false;
 
 
 /* if we aren't using the auto-configuration process, 
@@ -339,15 +339,17 @@ class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
  * connecting to UDP port on laptop runnin Max
  */
 void configUdp(){
-  if(!wifi_connected && WiFi.status() == WL_CONNECTED){
-    Serial.println("HTTP server:" + WiFi.localIP().toString());
-    Serial.println("SSID:" + WiFi.SSID());
-    wifi_connected = true;
-    udp.begin(UDPPort);
-  }
-  if(WiFi.status() != WL_CONNECTED){
-    Serial.println("wifi not connected");
-    wifi_connected = false;
+  if(WIFI_MODE_ON){
+    if(!wifi_connected && WiFi.status() == WL_CONNECTED){
+      Serial.println("HTTP server:" + WiFi.localIP().toString());
+      Serial.println("SSID:" + WiFi.SSID());
+      wifi_connected = true;
+      udp.begin(UDPPort);
+    }
+    if(WiFi.status() != WL_CONNECTED){
+      Serial.println("wifi not connected");
+      wifi_connected = false;
+    }
   }
   
 }
