@@ -3,3 +3,4 @@
 3, 28:ec:9a:15:05:f3 bird;
 4, b4:52:a9:bf:0b:30 basil;
 5, b4:52:a9:be:fd:cc rosemary;
+6, f0:b5:d1:7e:e2:73 thyme;
