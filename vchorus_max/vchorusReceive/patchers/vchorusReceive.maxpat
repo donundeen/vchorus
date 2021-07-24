@@ -2238,7 +2238,7 @@
 , 			{
 				"box" : 				{
 					"coll_data" : 					{
-						"count" : 5,
+						"count" : 6,
 						"data" : [ 							{
 								"key" : 1,
 								"value" : [ "28:ec:9a:15:19:29", "elm" ]
@@ -2258,6 +2258,10 @@
 , 							{
 								"key" : 5,
 								"value" : [ "b4:52:a9:be:fd:cc", "rosemary" ]
+							}
+, 							{
+								"key" : 6,
+								"value" : [ "f0:b5:d1:7e:e2:73", "thyme" ]
 							}
  ]
 					}
