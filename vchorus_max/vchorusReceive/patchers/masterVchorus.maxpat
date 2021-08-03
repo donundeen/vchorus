@@ -49,7 +49,7 @@
 					"patching_rect" : [ 422.0, 28.0, 174.0, 38.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 2,
-					"presentation_rect" : [ 396.5, -5.5, 141.0, 38.0 ],
+					"presentation_rect" : [ 396.5, -5.5, 142.0, 38.0 ],
 					"text" : "Presets (shift-click to store, click to recall)"
 				}
 
