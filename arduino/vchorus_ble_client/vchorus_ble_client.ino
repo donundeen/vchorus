@@ -431,7 +431,7 @@ void resolveids(){
 void setup() {
 //  Serial.begin(115200);
 //  Serial.begin(9600);
-  Serial.begin(38400);
+  Serial.begin(38400);  
   delay(1000);
   Serial.println("setup");
 
@@ -535,4 +535,19 @@ void loop() {
   }
   
   delay(1000); // Delay a second between loops.
+
+
+  // testing serial receive
+  if (Serial.available() > 0 ) {
+    // read the incoming byte:
+    Serial.println("reading serial");
+    int incomingByte = Serial.read();
+
+    // say what you got:
+    Serial.print("I received: ");
+    Serial.println(incomingByte, DEC);
+  }
+
+
+  
 } // End of loop
