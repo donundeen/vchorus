@@ -85,7 +85,8 @@ String perifitids[] = {
 "64:33:db:a3:c5:dd",  
 "b4:52:a9:bc:5a:c3",
 "64:33:db:bd:b5:ad", 
-"64:33:db:a3:82:08"
+"64:33:db:a3:82:08",
+"f0:b5:d1:7e:e7:72"
 };
 
 String arduinomacs[]= { 
@@ -96,11 +97,12 @@ String arduinomacs[]= {
 "b4:52:a9:bf:0b:30",  
 "40:F5:20:45:D5:14",
 "94:B9:7E:6B:6F:F4", 
-"",  
-"",
-"", 
-"",  
-""
+"94:B9:7E:6B:62:38",  
+"3C:61:05:4B:0A:DC",
+"3C:61:05:4B:0B:D8", 
+"94:B9:7E:6B:66:D4",  
+"94:B9:7E:6B:6F:E4",
+"E0:E2:E6:9D:0C:6C"
 };
 
 String humannames[] = { 
@@ -115,7 +117,8 @@ String humannames[] = {
 "pine",
 "cypress", 
 "birch",  
-"ash"
+"ash",
+"eucalyptus"
 };
 
 String thisperifitid = "";
