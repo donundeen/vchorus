@@ -73,6 +73,50 @@ const char * UDPReceiverIP = "192.168.1.106"; // ip where UDP messages are going
 const int UDPPort = 9002; // the UDP port that Max is listening on
 
 
+char *perifitids[] = { 
+"28:ec:9a:15:19:29", 
+"28:ec:9a:14:2b:b3",  
+"f0:b5:d1:7e:e2:73",
+"28:ec:9a:15:05:f3",
+"b4:52:a9:bf:0b:30", 
+"b4:52:a9:be:fd:cc",  
+"b4:52:a9:bf:b4:a7",
+"64:33:db:a4:cc:ac", 
+"64:33:db:a3:c5:dd",  
+"b4:52:a9:bc:5a:c3",
+"64:33:db:bd:b5:ad", 
+"64:33:db:a3:82:08"
+};
+
+char *arduinomacs[]= { 
+"40:F5:20:45:D0:18", 
+"40:F5:20:45:D0:A4",  
+"A8:03:2A:EA:EA:C0",
+"7C:9E:BD:D8:29:80", 
+"b4:52:a9:bf:0b:30",  
+"40:F5:20:45:D5:14",
+"94:B9:7E:6B:6F:F4", 
+"",  
+"",
+"", 
+"",  
+""
+};
+
+char *humannames[] = { 
+"elm", 
+"oak",  
+"thyme",
+"bird", 
+"basil",  
+"rosemary",
+"fir", 
+"cedar",  
+"pine",
+"cypress", 
+"birch",  
+"ash"
+};
 
 /*
  * Sometimes we need to delete the SSIDs that are stored in the config of the arduino.
