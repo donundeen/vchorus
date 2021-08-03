@@ -44,7 +44,7 @@
  *  When WIFI_MODE_ON = false, you need the arduino connected to the laptop, 
  *  and it will send data over serial USB
  */
-const boolean WIFI_MODE_ON = true;
+const boolean WIFI_MODE_ON = false;
 
 
 /* if we aren't using the auto-configuration process, 
@@ -73,7 +73,7 @@ const char * UDPReceiverIP = "192.168.1.106"; // ip where UDP messages are going
 const int UDPPort = 9002; // the UDP port that Max is listening on
 
 
-char *perifitids[] = { 
+String perifitids[] = { 
 "28:ec:9a:15:19:29", 
 "28:ec:9a:14:2b:b3",  
 "f0:b5:d1:7e:e2:73",
@@ -88,7 +88,7 @@ char *perifitids[] = {
 "64:33:db:a3:82:08"
 };
 
-char *arduinomacs[]= { 
+String arduinomacs[]= { 
 "40:F5:20:45:D0:18", 
 "40:F5:20:45:D0:A4",  
 "A8:03:2A:EA:EA:C0",
@@ -103,7 +103,7 @@ char *arduinomacs[]= {
 ""
 };
 
-char *humannames[] = { 
+String humannames[] = { 
 "elm", 
 "oak",  
 "thyme",
@@ -117,6 +117,10 @@ char *humannames[] = {
 "birch",  
 "ash"
 };
+
+String thisperifitid = "";
+String thisarduinomac = "";
+String thishumanname = "";
 
 /*
  * Sometimes we need to delete the SSIDs that are stored in the config of the arduino.
@@ -305,10 +309,15 @@ class MyClientCallback : public BLEClientCallbacks {
 };
 
 bool connectToServer() {
-    Serial.print("Forming a connection to ");
-    Serial.println(myDevice->getAddress().toString().c_str());
-    deviceID = myDevice->getAddress().toString().c_str();
 
+    deviceID = myDevice->getAddress().toString().c_str();
+    if (deviceID != thisperifitid){
+      Serial.println("wrong perifit for this device, not connecting");
+      return false;
+    }
+
+    Serial.print("Forming a connection to ");
+    Serial.println(deviceID);    
     
     BLEClient*  pClient  = BLEDevice::createClient();
     Serial.println(" - Created client");
@@ -399,7 +408,25 @@ void configUdp(){
   
 }
 
-
+void resolveids(){
+  int foundindex = -1;
+  for (int index = 0; index < sizeof(arduinomacs); index++) {
+    if(thisarduinomac == arduinomacs[index]){
+      foundindex = index;
+      break;
+    }
+  }
+  if(foundindex >= 0){
+    thisperifitid = perifitids[foundindex];
+    thishumanname = humannames[foundindex];
+  }
+  Serial.print("arduinomac : " );
+  Serial.println(thisarduinomac);
+  Serial.print("perifitid : ");
+  Serial.println(thisperifitid);
+  Serial.print("human name : " );
+  Serial.println(thishumanname);
+}
 
 void setup() {
 //  Serial.begin(115200);
@@ -413,6 +440,8 @@ void setup() {
   Serial.print("ESP Board MAC Address:  ");
   Serial.println(WiFi.macAddress());
 
+  thisarduinomac = WiFi.macAddress();
+  resolveids();
 
 
   if(WIFI_MODE_ON){
