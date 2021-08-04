@@ -1,8 +1,8 @@
 {
 	"name" : "vchorusReceive",
 	"version" : 1,
-	"creationdate" : 2082826072,
-	"modificationdate" : 3710924848,
+	"creationdate" : 2082825951,
+	"modificationdate" : 3710937847,
 	"viewrect" : [ 25.0, 104.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -39,6 +39,11 @@
 ,
 		"data" : 		{
 			"devices.txt" : 			{
+				"kind" : "textfile",
+				"local" : 1
+			}
+,
+			"Notes.txt" : 			{
 				"kind" : "textfile",
 				"local" : 1
 			}

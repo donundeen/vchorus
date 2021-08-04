@@ -1,0 +1,2 @@
+GIT Command:
+cd /Users/donundeen/Documents/htdocs/vchorus;  git pull; git  add --all ; git commit -m"new updates" ;  git push
