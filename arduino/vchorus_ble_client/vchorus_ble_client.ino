@@ -3,6 +3,11 @@
 // read the README for starters
 
 /*
+ * Git Command:
+ * cd /Users/donundeen/Documents/htdocs/vchorus;  git pull; git  add --all ; git commit -m"new updates" ;  git push
+ */
+
+/*
  * Required libraries to install in the arduino IDE (use the Library Manager to find and install):
  * https://github.com/Hieromon/PageBuilder : PageBuilder
  * https://github.com/bblanchon/ArduinoJson : ArduinoJson
@@ -56,14 +61,17 @@ const boolean HARDCODE_SSID = true;
 /*
 const char *WIFI_SSID = "Hot Fuzz Ext";
 const char *WIFI_PASSWORD = "nanobot706";
+const char * UDPReceiverIP = "192.168.1.138"; // ip where UDP messages are going
 */
 /*
 const char *WIFI_SSID = "vchorus";
 const char *WIFI_PASSWORD = "vchorus123";
+const char * UDPReceiverIP = "192.168.1.106"; // ip where UDP messages are going
 */
 // remember you can't connect to 5G networks with the arduino. 
 const char *WIFI_SSID = "TheBlueRoom";
 const char *WIFI_PASSWORD = "Maggiepants568";
+const char * UDPReceiverIP = "192.168.1.2"; // ip where UDP messages are going
 
 
 
@@ -73,9 +81,6 @@ const char *WIFI_PASSWORD = "Maggiepants568";
  * 
  */
  // 192.168.1.2
-//const char * UDPReceiverIP = "192.168.1.138"; // ip where UDP messages are going
-//const char * UDPReceiverIP = "192.168.1.106"; // ip where UDP messages are going
-const char * UDPReceiverIP = "192.168.1.2"; // ip where UDP messages are going
 const int UDPPort = 9002; // the UDP port that Max is listening on
 
 
