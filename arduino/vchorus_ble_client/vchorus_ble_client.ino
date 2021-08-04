@@ -44,7 +44,7 @@
  *  When WIFI_MODE_ON = false, you need the arduino connected to the laptop, 
  *  and it will send data over serial USB
  */
-const boolean WIFI_MODE_ON = false;
+const boolean WIFI_MODE_ON = true;
 
 
 /* if we aren't using the auto-configuration process, 
@@ -57,9 +57,13 @@ const boolean HARDCODE_SSID = true;
 const char *WIFI_SSID = "Hot Fuzz Ext";
 const char *WIFI_PASSWORD = "nanobot706";
 */
-
+/*
 const char *WIFI_SSID = "vchorus";
 const char *WIFI_PASSWORD = "vchorus123";
+*/
+// remember you can't connect to 5G networks with the arduino. 
+const char *WIFI_SSID = "TheBlueRoom";
+const char *WIFI_PASSWORD = "Maggiepants568";
 
 
 
@@ -68,8 +72,10 @@ const char *WIFI_PASSWORD = "vchorus123";
  * of the laptop running max, set that IP here.
  * 
  */
+ // 192.168.1.2
 //const char * UDPReceiverIP = "192.168.1.138"; // ip where UDP messages are going
-const char * UDPReceiverIP = "192.168.1.106"; // ip where UDP messages are going
+//const char * UDPReceiverIP = "192.168.1.106"; // ip where UDP messages are going
+const char * UDPReceiverIP = "192.168.1.2"; // ip where UDP messages are going
 const int UDPPort = 9002; // the UDP port that Max is listening on
 
 
