@@ -58,21 +58,25 @@ const boolean WIFI_MODE_ON = true;
 */
 const boolean HARDCODE_SSID = true;
 
+// remember you can't connect to 5G networks with the arduino. 
+
+
 /*
 const char *WIFI_SSID = "Hot Fuzz Ext";
 const char *WIFI_PASSWORD = "nanobot706";
 const char * UDPReceiverIP = "192.168.1.138"; // ip where UDP messages are going
 */
-/*
+
 const char *WIFI_SSID = "vchorus";
 const char *WIFI_PASSWORD = "vchorus123";
 const char * UDPReceiverIP = "192.168.1.106"; // ip where UDP messages are going
-*/
-// remember you can't connect to 5G networks with the arduino. 
+
+
+/*
 const char *WIFI_SSID = "TheBlueRoom";
 const char *WIFI_PASSWORD = "Maggiepants568";
 const char * UDPReceiverIP = "192.168.1.2"; // ip where UDP messages are going
-
+*/
 
 
 /*
