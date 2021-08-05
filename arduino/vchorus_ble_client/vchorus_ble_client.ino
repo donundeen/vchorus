@@ -60,17 +60,11 @@ const boolean HARDCODE_SSID = true;
 
 // remember you can't connect to 5G networks with the arduino. 
 
-
-/*
-const char *WIFI_SSID = "Hot Fuzz Ext";
-const char *WIFI_PASSWORD = "nanobot706";
-const char * UDPReceiverIP = "192.168.1.138"; // ip where UDP messages are going
-*/
-
 const char *WIFI_SSID = "vchorus";
 const char *WIFI_PASSWORD = "vchorus123";
-const char * UDPReceiverIP = "192.168.1.106"; // ip where UDP messages are going
-
+// ip where UDP messages are going
+//const char * UDPReceiverIP = "192.168.1.138"; // don's ip on this SSID
+const char * UDPReceiverIP = "192.168.1.139"; // althea's ip on this SSID
 
 /*
 const char *WIFI_SSID = "TheBlueRoom";
