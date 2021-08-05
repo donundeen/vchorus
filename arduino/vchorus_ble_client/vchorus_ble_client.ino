@@ -60,6 +60,14 @@ const boolean HARDCODE_SSID = true;
 
 // remember you can't connect to 5G networks with the arduino. 
 
+
+/*
+ * Configuration of Network connection:
+ * WIFI_SSID : The SSID of the wifi network we are using
+ * WIFI_PASSWORD : The network password
+ * UDPReceiverIP : the IP address of the device running the Max Patch
+ * 
+ */
 const char *WIFI_SSID = "vchorus";
 const char *WIFI_PASSWORD = "vchorus123";
 // ip where UDP messages are going
