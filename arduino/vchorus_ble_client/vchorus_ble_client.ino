@@ -24,8 +24,11 @@
 #include <OSCTiming.h>
 #include <OSCMessage.h>
 #include <OSCMatch.h>
+/*
 #include <SLIPEncodedUSBSerial.h>
-
+#include <SLIPEncodedSerial.h>
+SLIPEncodedSerial SLIPSerial(Serial);
+*/
 
 // these the libraries for connecting to WiFi
 // based on docs here: https://hieromon.github.io/AutoConnect/gettingstarted.html 
@@ -68,17 +71,18 @@ const boolean HARDCODE_SSID = true;
  * UDPReceiverIP : the IP address of the device running the Max Patch
  * 
  */
+ /*
 const char *WIFI_SSID = "vchorus";
 const char *WIFI_PASSWORD = "vchorus123";
 // ip where UDP messages are going
 //const char * UDPReceiverIP = "192.168.1.138"; // don's ip on this SSID
 const char * UDPReceiverIP = "192.168.1.139"; // althea's ip on this SSID
+*/
 
-/*
 const char *WIFI_SSID = "TheBlueRoom";
 const char *WIFI_PASSWORD = "Maggiepants568";
-const char * UDPReceiverIP = "192.168.1.2"; // ip where UDP messages are going
-*/
+const char * UDPReceiverIP = "192.168.1.4"; // ip where UDP messages are going
+
 
 
 /*
@@ -141,6 +145,7 @@ String humannames[] = {
 String thisperifitid = "";
 String thisarduinomac = "";
 String thishumanname = "";
+String thisarduinoip = "";
 
 /*
  * Sometimes we need to delete the SSIDs that are stored in the config of the arduino.
@@ -150,8 +155,6 @@ String thishumanname = "";
  * 
  */
 const boolean DELETE_SSIDS = false;
-//const char * UDPReceiverIP = "192.168.1.101"; // ip where UDP messages are going
-//const char * UDPReceiverIP = "192.168.1.126"; // ip where UDP messages are going
 
 /*
  * Information about the kind of Bluetooth device we're connecting to
@@ -203,9 +206,15 @@ AutoConnect      Portal(Server);
 AutoConnectConfig  config;
 
 
+OSCErrorCode error;
 
-
-
+#ifndef BUILTIN_LED
+#ifdef LED_BUILTIN
+#define BUILTIN_LED LED_BUILTIN
+#else
+#define BUILTIN_LED 13
+#endif
+#endif
 
 
 
@@ -299,9 +308,11 @@ void sendOSCUDP(String deviceID, int lower, int upper){
  if(WiFi.status() == WL_CONNECTED){   
   //send hello world to server
   char buffer[20];
+  char ipbuffer[20];
+  thisarduinoip.toCharArray(ipbuffer, 20);
   deviceID.toCharArray(buffer, 20);
   OSCMessage oscmsg("/perifit/1");  
-  oscmsg.add(lower).add(upper).add(buffer);
+  oscmsg.add(lower).add(upper).add(buffer).add(ipbuffer);
    
   udp.beginPacket(UDPReceiverIP, UDPPort);
 //  udp.write(buffer, msg.length()+1);
@@ -311,8 +322,47 @@ void sendOSCUDP(String deviceID, int lower, int upper){
  }else{
   Serial.println("not sending udp, not connected");
  }
+
+
+  // now check for incoming data?
+  receiveOSC();
   
 }
+
+
+// OSC dispatches
+void led(OSCMessage &msg) {
+  int ledState = msg.getInt(0);
+  digitalWrite(BUILTIN_LED, ledState);  
+}
+
+void action(OSCMessage &msgIn) {
+  Serial.println("got action");
+  int testValue = msgIn.getInt(0);
+  Serial.println(testValue);
+}
+
+// see this instead: https://github.com/CNMAT/OSC/blob/master/examples/ESP8266ReceiveMessage/ESP8266ReceiveMessage.ino
+void receiveOSC() {
+  OSCMessage msg;
+  int size = udp.parsePacket();
+
+  if (size > 0) {
+    while (size--) {
+      msg.fill(udp.read());
+    }
+    if (!msg.hasError()) {
+      Serial.println("dispatching");
+      msg.dispatch("/led", led);
+    } else {
+      error = msg.getError();
+      Serial.print("error: ");
+      Serial.println(error);
+    }
+  }
+}
+
+
 
 
 /*
@@ -416,6 +466,7 @@ void configUdp(){
   if(WIFI_MODE_ON){
     if(!wifi_connected && WiFi.status() == WL_CONNECTED){
       Serial.println("HTTP server:" + WiFi.localIP().toString());
+      thisarduinoip = WiFi.localIP().toString();
       Serial.println("SSID:" + WiFi.SSID());
       wifi_connected = true;
       udp.begin(UDPPort);
@@ -425,7 +476,6 @@ void configUdp(){
       wifi_connected = false;
     }
   }
-  
 }
 
 void resolveids(){
@@ -455,7 +505,11 @@ void setup() {
   delay(1000);
   Serial.println("setup");
 
+  // for incoming UDP
+//  SLIPSerial.begin(115200);
 
+
+  pinMode(BUILTIN_LED, OUTPUT);
 
   Serial.print("ESP Board MAC Address:  ");
   Serial.println(WiFi.macAddress());
