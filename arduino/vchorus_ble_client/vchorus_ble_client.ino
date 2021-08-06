@@ -331,6 +331,13 @@ void sendOSCUDP(String deviceID, int lower, int upper){
 
 
 // OSC dispatches
+void superficial(OSCMessage &msg) {
+  int sval = msg.getInt(0);
+  Serial.print("superficial");
+  Serial.println(sval);
+  // do something with this value from 0-1000
+}
+
 void led(OSCMessage &msg) {
   int ledState = msg.getInt(0);
   digitalWrite(BUILTIN_LED, ledState);  
@@ -354,6 +361,7 @@ void receiveOSC() {
     if (!msg.hasError()) {
       Serial.println("dispatching");
       msg.dispatch("/led", led);
+      msg.dispatch("/superficial", superficial);
     } else {
       error = msg.getError();
       Serial.print("error: ");
