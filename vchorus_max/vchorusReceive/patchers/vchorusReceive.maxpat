@@ -40,6 +40,90 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "calibriation done for: 0: contract, 1: rest, 2:release",
+					"id" : "obj-176",
+					"ignoreclick" : 1,
+					"index" : 0,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1204.587055444717407, -117.376142501831055, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-168",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1204.587055444717407, -172.477049827575684, 101.0, 22.0 ],
+					"text" : "r #0calibratedone"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-165",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ -64.220178127288818, 417.0, 103.0, 22.0 ],
+					"text" : "s #0calibratedone"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-163",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1515.0, -264.5, 128.0, 22.0 ],
+					"text" : "s #releasemidichannel"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-158",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1359.049511671066284, -264.5, 109.0, 22.0 ],
+					"text" : "s #releasemidinote"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "release midi channel",
+					"id" : "obj-156",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1515.0, -311.5, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "relase midi note",
+					"id" : "obj-157",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1366.0, -311.5, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-235",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
@@ -206,7 +290,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1081.0, -81.0, 30.0, 30.0 ]
+					"patching_rect" : [ 1037.880737543106079, -121.366969108581543, 30.0, 30.0 ]
 				}
 
 			}
@@ -217,7 +301,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1081.0, -135.0, 65.0, 22.0 ],
+					"patching_rect" : [ 1037.880737543106079, -175.366969108581543, 65.0, 22.0 ],
 					"text" : "r #0restval"
 				}
 
@@ -425,7 +509,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ -104.0, 417.0, 50.0, 22.0 ]
+					"patching_rect" : [ -125.5, 417.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -636,8 +720,8 @@
 					"id" : "obj-150",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "", "" ],
+					"numoutlets" : 4,
+					"outlettype" : [ "", "", "", "" ],
 					"patching_rect" : [ -214.0, 370.0, 125.0, 22.0 ],
 					"text" : "calibrate_three_levels"
 				}
@@ -1813,16 +1897,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-526",
-					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 107.0, 1759.0, 50.0, 35.0 ],
+					"patching_rect" : [ 107.0, 1759.0, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_linecount" : 2,
-					"presentation_rect" : [ 118.5, 550.582442879676819, 50.0, 35.0 ],
-					"text" : "0.046262"
+					"presentation_rect" : [ 118.5, 550.582442879676819, 50.0, 22.0 ],
+					"text" : "1."
 				}
 
 			}
@@ -5472,6 +5554,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-165", 0 ],
+					"source" : [ "obj-150", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-192", 0 ],
 					"order" : 0,
 					"source" : [ "obj-150", 0 ]
@@ -5555,6 +5644,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-163", 0 ],
+					"source" : [ "obj-156", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-158", 0 ],
+					"source" : [ "obj-157", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-142", 0 ],
 					"source" : [ "obj-159", 0 ]
 				}
@@ -5603,6 +5706,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-142", 0 ],
 					"source" : [ "obj-164", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-176", 0 ],
+					"source" : [ "obj-168", 0 ]
 				}
 
 			}
@@ -5965,7 +6075,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-85", 1 ],
-					"midpoints" : [ 96.5, 117.0, 60.0, 117.0, 60.0, 156.0, 49.0, 156.0 ],
+					"midpoints" : [ 96.5, 117.0, 85.688071250915527, 117.0, 85.688071250915527, 153.247706651687622, 49.0, 153.247706651687622 ],
 					"source" : [ "obj-3", 2 ]
 				}
 
@@ -5973,7 +6083,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-85", 0 ],
-					"midpoints" : [ 67.5, 156.0, 14.0, 156.0 ],
+					"midpoints" : [ 67.5, 145.908257722854614, 14.0, 145.908257722854614 ],
 					"source" : [ "obj-3", 1 ]
 				}
 
@@ -5981,7 +6091,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-92", 0 ],
-					"midpoints" : [ 125.5, 108.0, 96.0, 108.0, 96.0, 132.0, 68.5, 132.0 ],
+					"midpoints" : [ 125.5, 108.0, 105.17431116104126, 108.0, 105.17431116104126, 161.357795715332031, 68.5, 161.357795715332031 ],
 					"order" : 1,
 					"source" : [ "obj-3", 3 ]
 				}
@@ -7549,8 +7659,8 @@
 			}
 , 			{
 				"name" : "calibrate_three_levels.maxpat",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive",
-				"patcherrelativepath" : "..",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -7558,6 +7668,27 @@
 				"name" : "avgLast.maxpat",
 				"bootpath" : "~/Documents/Max 8/Patches/MyTools/helpWithNumbers",
 				"patcherrelativepath" : "../../../../../Max 8/Patches/MyTools/helpWithNumbers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "capture_peak.maxpat",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "previous_float.maxpat",
+				"bootpath" : "~/Documents/Max 8/Patches/MyTools/helpWithNumbers",
+				"patcherrelativepath" : "../../../../../Max 8/Patches/MyTools/helpWithNumbers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "capture_trough.maxpat",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
