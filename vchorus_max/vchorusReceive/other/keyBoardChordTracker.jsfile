@@ -47,7 +47,10 @@ function setNote(note, vel){
 function getNoteFloat(fl){
   if(chordArray.length > 0){
     var index = Math.floor(chordArray.length * fl)
-    index = index % chordArray.length;
+	if(index == chordArray.length){
+			index = chordArray.length - 1;
+	}
+  //  index = index % chordArray.length;
     if(parseInt(chordArray[index]) > 0){
     	outlet(2, parseInt(chordArray[index]));
 	}
