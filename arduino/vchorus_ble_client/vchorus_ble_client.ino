@@ -75,7 +75,7 @@ const boolean HARDCODE_SSID = true;
 const char *WIFI_SSID = "vchorus";
 const char *WIFI_PASSWORD = "vchorus123";
 // ip where UDP messages are going
-const char * UDPReceiverIP = "192.168.1.145"; // don's ip on this SSID
+const char * UDPReceiverIP = "192.168.1.141"; // don's ip on this SSID
 //const char * UDPReceiverIP = "192.168.1.139"; // althea's ip on this SSID
 
 /*
@@ -90,7 +90,6 @@ const char * UDPReceiverIP = "192.168.1.4"; // ip where UDP messages are going
  * of the laptop running max, set that IP here.
  * 
  */
- // 192.168.1.2
 const int UDPPort = 9002; // the UDP port that Max is listening on
 
 
@@ -313,7 +312,8 @@ void sendOSCUDP(String deviceID, int lower, int upper){
   deviceID.toCharArray(buffer, 20);
   OSCMessage oscmsg("/perifit/1");  
   oscmsg.add(lower).add(upper).add(buffer).add(ipbuffer);
-   
+
+ 
   udp.beginPacket(UDPReceiverIP, UDPPort);
 //  udp.write(buffer, msg.length()+1);
   oscmsg.send(udp);
