@@ -109,6 +109,15 @@ const char *WIFI_PASSWORD = "vchorus123";
 //const char * UDPReceiverIP = "192.168.1.145"; // don's ip on this SSID
 const char * UDPReceiverIP = "192.168.1.139"; // althea's ip on this SSID
 
+
+/*
+const char *WIFI_SSID = "DTURRI";
+const char *WIFI_PASSWORD = "Healthdome1";
+// ip where UDP messages are going
+//const char * UDPReceiverIP = "192.168.1.145"; // don's ip on this SSID
+const char * UDPReceiverIP = "192.168.0.53"; // althea's ip on this SSID
+*/
+
 /*
 const char *WIFI_SSID = "TheBlueRoom";
 const char *WIFI_PASSWORD = "Maggiepants568";
@@ -337,6 +346,8 @@ static void notifyCallback(
   Serial.print("raw: ");
   Serial.println(raw);
 
+
+
 /*
   if (raw > rawMax) {
     rawMax = raw;
@@ -469,6 +480,10 @@ void sendOSCUDP(String deviceID, int lower, int upper){
    */
  if(WiFi.status() == WL_CONNECTED){   
   //send hello world to server
+
+  receiveOSC();
+
+  
   char buffer[20];
   char ipbuffer[20];
   thisarduinoip.toCharArray(ipbuffer, 20);
@@ -481,13 +496,15 @@ void sendOSCUDP(String deviceID, int lower, int upper){
   oscmsg.send(udp);
   udp.endPacket();
   oscmsg.empty();
+
+  receiveOSC();
+  
  }else{
   Serial.println("not sending udp, not connected");
  }
 
 
   // now check for incoming data?
-  receiveOSC();
   
 }
 
