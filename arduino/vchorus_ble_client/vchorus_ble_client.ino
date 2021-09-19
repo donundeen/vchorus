@@ -71,19 +71,23 @@ const boolean HARDCODE_SSID = true;
  * UDPReceiverIP : the IP address of the device running the Max Patch
  * 
  */
- 
+ /*
 const char *WIFI_SSID = "vchorus";
 const char *WIFI_PASSWORD = "vchorus123";
 // ip where UDP messages are going
 const char * UDPReceiverIP = "192.168.1.141"; // don's ip on this SSID
 //const char * UDPReceiverIP = "192.168.1.139"; // althea's ip on this SSID
+*/
+
+const char *WIFI_SSID = "EBOX-0187";
+const char *WIFI_PASSWORD = "9cea90e805";
+const char * UDPReceiverIP = "192.168.1.197"; // ip where UDP messages are going
 
 /*
 const char *WIFI_SSID = "TheBlueRoom";
 const char *WIFI_PASSWORD = "Maggiepants568";
 const char * UDPReceiverIP = "192.168.1.4"; // ip where UDP messages are going
 */
-
 
 /*
  * once you've figured out the IP address (on the same router the arduinos are connecting to)
@@ -92,6 +96,8 @@ const char * UDPReceiverIP = "192.168.1.4"; // ip where UDP messages are going
  */
 const int UDPPort = 9002; // the UDP port that Max is listening on
 
+// These three arrays need to have the same number of elements, and the elements at the same index need to align
+// ie, the perfit at perifitids[1] connects to the arduino listed at arduinomacs[1] and has the name at humannames[1]
 
 String perifitids[] = { 
 "28:ec:9a:15:19:29", 
@@ -114,7 +120,7 @@ String arduinomacs[]= {
 "40:F5:20:45:D0:A4",  
 "A8:03:2A:EA:EA:C0",
 "7C:9E:BD:D8:29:80", 
-"b4:52:a9:bf:0b:30",  
+"40:F5:20:44:B1:3C",
 "40:F5:20:45:D5:14",
 "94:B9:7E:6B:6F:F4", 
 "94:B9:7E:6B:62:38",  
@@ -154,6 +160,34 @@ String thisarduinoip = "";
  * 
  */
 const boolean DELETE_SSIDS = false;
+
+
+// We can adjust the power level of the device, and also the transmission power level
+/* BLEDevice::setPower(devicePowerLevel) // put this in the setup, after BLEDevice::init()
+ * power level can be one of:
+ * * ESP_PWR_LVL_N14
+ * * ESP_PWR_LVL_N11
+ * * ESP_PWR_LVL_N8
+ * * ESP_PWR_LVL_N5
+ * * ESP_PWR_LVL_N2
+ * * ESP_PWR_LVL_P3
+ * * ESP_PWR_LVL_P6
+ * * ESP_PWR_LVL_P9
+ * 
+ * Use P values to increase the power. default is P3. 
+ * 
+ */
+const esp_power_level_t devicePowerLevel = ESP_PWR_LVL_P6;
+
+/*
+ * And the transmission power level:
+ * esp_err_t errRc=esp_ble_tx_power_set(ESP_BLE_PWR_TYPE_DEFAULT,devicePowerLevel);
+ * esp_ble_tx_power_set(ESP_BLE_PWR_TYPE_ADV, devicePowerLevel);
+ * esp_ble_tx_power_set(ESP_BLE_PWR_TYPE_SCAN ,devicePowerLevel); 
+ */
+
+ const esp_power_level_t intDeviceTXPower = ESP_PWR_LVL_P6;
+
 
 /*
  * Information about the kind of Bluetooth device we're connecting to
@@ -580,6 +614,13 @@ void setup() {
     pBLEScan->setWindow(449);
     pBLEScan->setActiveScan(true);
     pBLEScan->start(5, false);
+
+   BLEDevice::setPower(devicePowerLevel);
+   esp_err_t errRc=esp_ble_tx_power_set(ESP_BLE_PWR_TYPE_DEFAULT,devicePowerLevel);
+   esp_ble_tx_power_set(ESP_BLE_PWR_TYPE_ADV, devicePowerLevel);
+   esp_ble_tx_power_set(ESP_BLE_PWR_TYPE_SCAN ,devicePowerLevel); 
+
+    
  
 } // End of setup.
 
