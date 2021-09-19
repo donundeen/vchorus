@@ -71,18 +71,18 @@ const boolean HARDCODE_SSID = true;
  * UDPReceiverIP : the IP address of the device running the Max Patch
  * 
  */
- /*
+ 
 const char *WIFI_SSID = "vchorus";
 const char *WIFI_PASSWORD = "vchorus123";
 // ip where UDP messages are going
 const char * UDPReceiverIP = "192.168.1.141"; // don's ip on this SSID
 //const char * UDPReceiverIP = "192.168.1.139"; // althea's ip on this SSID
-*/
 
+/*
 const char *WIFI_SSID = "EBOX-0187";
 const char *WIFI_PASSWORD = "9cea90e805";
 const char * UDPReceiverIP = "192.168.1.197"; // ip where UDP messages are going
-
+*/
 /*
 const char *WIFI_SSID = "TheBlueRoom";
 const char *WIFI_PASSWORD = "Maggiepants568";
