@@ -1705,7 +1705,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 609.0, 1208.593806266784668, 160.0, 22.0 ],
-					"text" : "host 192.168.1.145"
+					"text" : "host 6.6.6.6"
 				}
 
 			}
