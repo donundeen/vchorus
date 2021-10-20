@@ -71,13 +71,13 @@ const boolean HARDCODE_SSID = true;
  * UDPReceiverIP : the IP address of the device running the Max Patch
  * 
  */
- 
+ /*
 const char *WIFI_SSID = "vchorus";
 const char *WIFI_PASSWORD = "vchorus123";
 // ip where UDP messages are going
 const char * UDPReceiverIP = "192.168.1.141"; // don's ip on this SSID
 //const char * UDPReceiverIP = "192.168.1.139"; // althea's ip on this SSID
-
+*/
 /*
 const char *WIFI_SSID = "EBOX-0187";
 const char *WIFI_PASSWORD = "9cea90e805";
@@ -88,6 +88,11 @@ const char *WIFI_SSID = "TheBlueRoom";
 const char *WIFI_PASSWORD = "Maggiepants568";
 const char * UDPReceiverIP = "192.168.1.4"; // ip where UDP messages are going
 */
+
+const char *WIFI_SSID = "JJandJsKewlPad";
+const char *WIFI_PASSWORD = "WeL0veLettuce";
+const char * UDPReceiverIP = "10.0.0.243"; // ip where UDP messages are going
+
 
 /*
  * once you've figured out the IP address (on the same router the arduinos are connecting to)

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 69.0, 87.0, 1026.0, 694.0 ],
+		"rect" : [ 47.0, 92.0, 1026.0, 694.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,30 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-138",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 406.0, 390.0, 24.0, 24.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_enum" : [ "off", "on" ],
+							"parameter_longname" : "toggle[23]",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "toggle[23]",
+							"parameter_type" : 2
+						}
+
+					}
+,
+					"varname" : "toggle[22]"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-301",
 					"maxclass" : "comment",
@@ -846,7 +870,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 276.809523463249207, 1369.19053041934967, 81.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 727.000003814697266, 274.5, 70.523808181285858, 20.0 ],
+					"presentation_rect" : [ 7.0, 440.5, 70.523808181285858, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
@@ -886,7 +910,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 271.33333420753479, 1011.333343625068665, 81.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 727.000003814697266, 103.0, 75.0, 20.0 ],
+					"presentation_rect" : [ 727.000003814697266, 274.5, 75.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
@@ -926,7 +950,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 249.190475702285767, 683.038093566894531, 81.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 7.0, 440.5, 71.0, 20.0 ],
+					"presentation_rect" : [ 2.0, 272.5, 71.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
@@ -964,9 +988,9 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 233.0, 378.904762148857117, 81.0, 20.0 ],
+					"patching_rect" : [ 256.5, 379.333343207836151, 81.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 5.0, 272.5, 67.0, 20.0 ],
+					"presentation_rect" : [ 731.000003814697266, 101.5, 67.0, 20.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
@@ -3634,7 +3658,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-162",
-					"items" : [ "Select", "WiFi", "Device...", ",", "basil" ],
+					"items" : [ "Select", "WiFi", "Device...", ",", "rosemary", ",", "oak", ",", "elm" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -3645,9 +3669,9 @@
 					"presentation_rect" : [ 727.000003814697266, 414.0, 100.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "Select WiFi Device...", "basil" ],
+							"parameter_enum" : [ "Select WiFi Device...", "rosemary", "oak", "elm" ],
 							"parameter_longname" : "umenu[11]",
-							"parameter_mmax" : 1,
+							"parameter_mmax" : 3,
 							"parameter_shortname" : "umenu[11]",
 							"parameter_type" : 2
 						}
@@ -3661,7 +3685,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-36",
-					"items" : [ "Select", "WiFi", "Device...", ",", "basil" ],
+					"items" : [ "Select", "WiFi", "Device...", ",", "rosemary", ",", "oak", ",", "elm" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -3672,9 +3696,9 @@
 					"presentation_rect" : [ 7.0, 417.5, 100.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "Select WiFi Device...", "basil" ],
+							"parameter_enum" : [ "Select WiFi Device...", "rosemary", "oak", "elm" ],
 							"parameter_longname" : "umenu[10]",
-							"parameter_mmax" : 1,
+							"parameter_mmax" : 3,
 							"parameter_shortname" : "umenu[10]",
 							"parameter_type" : 2
 						}
@@ -3688,7 +3712,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-33",
-					"items" : [ "Select", "WiFi", "Device...", ",", "basil" ],
+					"items" : [ "Select", "WiFi", "Device...", ",", "rosemary", ",", "oak", ",", "elm" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -3699,9 +3723,9 @@
 					"presentation_rect" : [ 727.000003814697266, 250.0, 100.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "Select WiFi Device...", "basil" ],
+							"parameter_enum" : [ "Select WiFi Device...", "rosemary", "oak", "elm" ],
 							"parameter_longname" : "umenu[9]",
-							"parameter_mmax" : 1,
+							"parameter_mmax" : 3,
 							"parameter_shortname" : "umenu[9]",
 							"parameter_type" : 2
 						}
@@ -3715,7 +3739,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-31",
-					"items" : [ "Select", "WiFi", "Device...", ",", "basil" ],
+					"items" : [ "Select", "WiFi", "Device...", ",", "rosemary", ",", "elm", ",", "oak" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -3726,9 +3750,9 @@
 					"presentation_rect" : [ 5.0, 248.5, 100.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "Select WiFi Device...", "basil" ],
+							"parameter_enum" : [ "Select WiFi Device...", "rosemary", "elm", "oak" ],
 							"parameter_longname" : "umenu[8]",
-							"parameter_mmax" : 1,
+							"parameter_mmax" : 3,
 							"parameter_shortname" : "umenu[8]",
 							"parameter_type" : 2
 						}
@@ -3742,7 +3766,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-6",
-					"items" : [ "Select", "WiFi", "Device...", ",", "basil" ],
+					"items" : [ "Select", "WiFi", "Device...", ",", "rosemary", ",", "elm", ",", "oak" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -3753,9 +3777,9 @@
 					"presentation_rect" : [ 727.000003814697266, 77.5, 100.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "Select WiFi Device...", "basil" ],
+							"parameter_enum" : [ "Select WiFi Device...", "rosemary", "elm", "oak" ],
 							"parameter_longname" : "umenu[7]",
-							"parameter_mmax" : 1,
+							"parameter_mmax" : 3,
 							"parameter_shortname" : "umenu[7]",
 							"parameter_type" : 2
 						}
@@ -3769,7 +3793,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-161",
-					"items" : [ "Select", "WiFi", "Device...", ",", "basil" ],
+					"items" : [ "Select", "WiFi", "Device...", ",", "rosemary", ",", "oak", ",", "elm" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -3780,9 +3804,9 @@
 					"presentation_rect" : [ 7.0, 77.0, 100.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "Select WiFi Device...", "basil" ],
+							"parameter_enum" : [ "Select WiFi Device...", "rosemary", "oak", "elm" ],
 							"parameter_longname" : "umenu[6]",
-							"parameter_mmax" : 1,
+							"parameter_mmax" : 3,
 							"parameter_shortname" : "umenu[6]",
 							"parameter_type" : 2
 						}
@@ -6177,20 +6201,6 @@
 				}
 
 			}
-, 			{
-				"box" : 				{
-					"background" : 1,
-					"id" : "obj-201",
-					"ignoreclick" : 1,
-					"maxclass" : "mira.frame",
-					"numinlets" : 0,
-					"numoutlets" : 0,
-					"patching_rect" : [ 251.428603649139404, 556.190547466278076, 256.000006437301636, 182.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 35.099929623270214, -53.000044852495193, 407.37627244744283, 289.619061410427094 ]
-				}
-
-			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
@@ -6698,7 +6708,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-138", 0 ],
+					"order" : 0,
+					"source" : [ "obj-191", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 3 ],
+					"order" : 1,
 					"source" : [ "obj-191", 0 ]
 				}
 
@@ -8285,6 +8304,7 @@
 			"obj-13" : [ "number", "number", 0 ],
 			"obj-131" : [ "number[6]", "number[6]", 0 ],
 			"obj-133" : [ "umenu[4]", "umenu[4]", 0 ],
+			"obj-138" : [ "toggle[23]", "toggle[23]", 0 ],
 			"obj-14" : [ "kslider[10]", "kslider[8]", 0 ],
 			"obj-145" : [ "umenu[5]", "umenu[5]", 0 ],
 			"obj-161" : [ "umenu[6]", "umenu[6]", 0 ],
