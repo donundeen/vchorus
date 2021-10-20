@@ -719,7 +719,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 71.833343999999997, 373.0, 100.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"filename" : "BulbArray.jsfile.js",
+						"filename" : "BulbArray.jsfile",
 						"parameter_enable" : 0
 					}
 ,

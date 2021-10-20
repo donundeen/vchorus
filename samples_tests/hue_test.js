@@ -28,6 +28,8 @@ async function discoverAndCreateUser() {
   const ipAddress = "10.0.0.86";
 
   // Create an unauthenticated instance of the Hue API so that we can create a new user
+//  const unauthenticatedApi = await hueApi.createInsecureLocal(ipAddress).connect();
+//  const unauthenticatedApi = await hueApi.createLocal(ipAddress).connect();
   const unauthenticatedApi = await hueApi.createInsecureLocal(ipAddress).connect();
   
   let createdUser;
