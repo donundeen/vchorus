@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 409.0, 87.0, 1135.0, 694.0 ],
+		"rect" : [ 47.0, 92.0, 1026.0, 694.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-141",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 865.0, 704.0, 68.0, 22.0 ],
+					"text" : "r #0resetall"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-173",
 					"maxclass" : "message",
@@ -5344,7 +5356,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-145",
-					"items" : [ "AU DLS Synth 1", ",", "Scarlett 4i4 USB", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -5356,9 +5368,9 @@
 					"presentation_rect" : [ 796.000003814697266, 438.5, 100.0, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "AU DLS Synth 1", "Scarlett 4i4 USB", "from Max 1", "from Max 2" ],
+							"parameter_enum" : [ "AU DLS Synth 1", "from Max 1", "from Max 2" ],
 							"parameter_longname" : "umenu[5]",
-							"parameter_mmax" : 3,
+							"parameter_mmax" : 2,
 							"parameter_shortname" : "umenu[5]",
 							"parameter_type" : 2
 						}
@@ -5424,7 +5436,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-133",
-					"items" : [ "AU DLS Synth 1", ",", "Scarlett 4i4 USB", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -5436,9 +5448,9 @@
 					"presentation_rect" : [ 82.0, 437.5, 100.0, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "AU DLS Synth 1", "Scarlett 4i4 USB", "from Max 1", "from Max 2" ],
+							"parameter_enum" : [ "AU DLS Synth 1", "from Max 1", "from Max 2" ],
 							"parameter_longname" : "umenu[4]",
-							"parameter_mmax" : 3,
+							"parameter_mmax" : 2,
 							"parameter_shortname" : "umenu[4]",
 							"parameter_type" : 2
 						}
@@ -5504,7 +5516,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-110",
-					"items" : [ "AU DLS Synth 1", ",", "Scarlett 4i4 USB", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -5516,9 +5528,9 @@
 					"presentation_rect" : [ 800.000003814697266, 271.5, 100.0, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "AU DLS Synth 1", "Scarlett 4i4 USB", "from Max 1", "from Max 2" ],
+							"parameter_enum" : [ "AU DLS Synth 1", "from Max 1", "from Max 2" ],
 							"parameter_longname" : "umenu[3]",
-							"parameter_mmax" : 3,
+							"parameter_mmax" : 2,
 							"parameter_shortname" : "umenu[3]",
 							"parameter_type" : 2
 						}
@@ -5584,7 +5596,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-99",
-					"items" : [ "AU DLS Synth 1", ",", "Scarlett 4i4 USB", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -5596,9 +5608,9 @@
 					"presentation_rect" : [ 74.0, 272.5, 100.0, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "AU DLS Synth 1", "Scarlett 4i4 USB", "from Max 1", "from Max 2" ],
+							"parameter_enum" : [ "AU DLS Synth 1", "from Max 1", "from Max 2" ],
 							"parameter_longname" : "umenu[2]",
-							"parameter_mmax" : 3,
+							"parameter_mmax" : 2,
 							"parameter_shortname" : "umenu[2]",
 							"parameter_type" : 2
 						}
@@ -5664,7 +5676,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-78",
-					"items" : [ "AU DLS Synth 1", ",", "Scarlett 4i4 USB", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -5676,9 +5688,9 @@
 					"presentation_rect" : [ 804.000003814697266, 101.5, 100.0, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "AU DLS Synth 1", "Scarlett 4i4 USB", "from Max 1", "from Max 2" ],
+							"parameter_enum" : [ "AU DLS Synth 1", "from Max 1", "from Max 2" ],
 							"parameter_longname" : "umenu[1]",
-							"parameter_mmax" : 3,
+							"parameter_mmax" : 2,
 							"parameter_shortname" : "umenu[1]",
 							"parameter_type" : 2
 						}
@@ -5807,7 +5819,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-7",
-					"items" : [ "AU DLS Synth 1", ",", "Scarlett 4i4 USB", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -5819,9 +5831,9 @@
 					"presentation_rect" : [ 80.0, 102.0, 100.0, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "AU DLS Synth 1", "Scarlett 4i4 USB", "from Max 1", "from Max 2" ],
+							"parameter_enum" : [ "AU DLS Synth 1", "from Max 1", "from Max 2" ],
 							"parameter_longname" : "umenu",
-							"parameter_mmax" : 3,
+							"parameter_mmax" : 2,
 							"parameter_shortname" : "umenu",
 							"parameter_type" : 2
 						}
@@ -8074,6 +8086,30 @@
 				"patchline" : 				{
 					"destination" : [ "obj-88", 0 ],
 					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-210", 0 ],
+					"order" : 0,
+					"source" : [ "obj-141", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-211", 0 ],
+					"order" : 1,
+					"source" : [ "obj-141", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-212", 0 ],
+					"order" : 2,
+					"source" : [ "obj-141", 0 ]
 				}
 
 			}
@@ -10423,85 +10459,78 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "h-colours.png",
-				"bootpath" : "~/Desktop",
-				"patcherrelativepath" : "../../../../../..",
-				"type" : "PNG",
-				"implicit" : 1
-			}
-, 			{
 				"name" : "vchorusReceive.maxpat",
-				"bootpath" : "~/Desktop/vchorus/oct20/vchorus-master/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "dynamic_scaling_2.maxpat",
-				"bootpath" : "~/Desktop/vchorus/oct20/vchorus-master/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "keyBoardChordTracker.jsfile",
-				"bootpath" : "~/Desktop/vchorus/oct20/vchorus-master/vchorus_max/vchorusReceive/other",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/other",
 				"patcherrelativepath" : "../other",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "uniqueList.jsfile",
-				"bootpath" : "~/Desktop/vchorus/oct20/vchorus-master/vchorus_max/vchorusReceive/other",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/other",
 				"patcherrelativepath" : "../other",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "devices.txt",
-				"bootpath" : "~/Desktop/vchorus/oct20/vchorus-master/vchorus_max/vchorusReceive/data",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/data",
 				"patcherrelativepath" : "../data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "serialPortIdentifier.maxpat",
-				"bootpath" : "~/Desktop/vchorus/oct20/vchorus-master/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "dynamic_scaling.maxpat",
-				"bootpath" : "~/Desktop/vchorus/oct20/vchorus-master/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "average_peak.maxpat",
-				"bootpath" : "~/Desktop/vchorus/oct20/vchorus-master/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "average_trough.maxpat",
-				"bootpath" : "~/Desktop/vchorus/oct20/vchorus-master/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vchorusHue.maxpat",
-				"bootpath" : "~/Desktop/vchorus/oct20/vchorus-master/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "BulbArray.jsfile.js",
-				"bootpath" : "~/Desktop/vchorus/oct20/vchorus-master/vchorus_max/vchorusReceive/code",
+				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
@@ -10588,8 +10617,8 @@
 , 			{
 				"name" : "texteditGold",
 				"default" : 				{
-					"bgcolor" : [ 0.764706, 0.592157, 0.101961, 0.68 ],
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
+					"bgcolor" : [ 0.764706, 0.592157, 0.101961, 0.68 ]
 				}
 ,
 				"parentstyle" : "",
