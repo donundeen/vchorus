@@ -1,8 +1,8 @@
 {
 	"name" : "vchorusReceive",
 	"version" : 1,
-	"creationdate" : 2082825951,
-	"modificationdate" : 3710937847,
+	"creationdate" : 2082825830,
+	"modificationdate" : 3717855191,
 	"viewrect" : [ 25.0, 104.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -11,11 +11,6 @@
 	"contents" : 	{
 		"patchers" : 		{
 			"masterVchorus.maxpat" : 			{
-				"kind" : "patcher",
-				"local" : 1
-			}
-,
-			"vchorusReceive.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -34,6 +29,15 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
+,
+			"vchorusHue.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+
+		}
+,
+		"code" : 		{
 
 		}
 ,
@@ -47,6 +51,10 @@
 				"kind" : "textfile",
 				"local" : 1
 			}
+
+		}
+,
+		"externals" : 		{
 
 		}
 ,
