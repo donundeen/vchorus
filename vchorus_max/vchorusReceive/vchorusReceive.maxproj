@@ -1,8 +1,8 @@
 {
 	"name" : "vchorusReceive",
 	"version" : 1,
-	"creationdate" : 2082825830,
-	"modificationdate" : 3717855191,
+	"creationdate" : 2082825709,
+	"modificationdate" : 3717949026,
 	"viewrect" : [ 25.0, 104.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -20,12 +20,12 @@
 				"local" : 1
 			}
 ,
-			"dynamic_scaling.maxpat" : 			{
+			"vChorusTouchOSC.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
 ,
-			"testSerialFromPerifit.maxpat" : 			{
+			"dynamic_scaling.maxpat" : 			{
 				"kind" : "patcher",
 				"local" : 1
 			}
@@ -34,6 +34,15 @@
 				"kind" : "patcher",
 				"local" : 1
 			}
+,
+			"testSerialFromPerifit.maxpat" : 			{
+				"kind" : "patcher",
+				"local" : 1
+			}
+
+		}
+,
+		"media" : 		{
 
 		}
 ,

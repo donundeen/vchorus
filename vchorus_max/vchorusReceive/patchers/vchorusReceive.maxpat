@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 598.0, 97.0, 831.0, 694.0 ],
+		"rect" : [ 130.0, 97.0, 1299.0, 694.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -763,7 +763,7 @@
 					"comment" : "release avg value",
 					"id" : "obj-264",
 					"ignoreclick" : 1,
-					"index" : 10,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -788,7 +788,7 @@
 					"comment" : "rest avg value",
 					"id" : "obj-262",
 					"ignoreclick" : 1,
-					"index" : 9,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1036,11 +1036,11 @@
 				"box" : 				{
 					"comment" : "reset trough release value average (bang)",
 					"id" : "obj-239",
-					"index" : 16,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 2347.50000011920929, -311.5, 30.0, 30.0 ]
 				}
 
@@ -1049,11 +1049,11 @@
 				"box" : 				{
 					"comment" : "capture trough release value for average (toggle)",
 					"id" : "obj-240",
-					"index" : 15,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 2217.0, -311.5, 30.0, 30.0 ]
 				}
 
@@ -1062,11 +1062,11 @@
 				"box" : 				{
 					"comment" : "reset rest value (bang)",
 					"id" : "obj-237",
-					"index" : 14,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 2087.0, -311.5, 30.0, 30.0 ]
 				}
 
@@ -1075,11 +1075,11 @@
 				"box" : 				{
 					"comment" : "capture rest value for average (toggle)",
 					"id" : "obj-238",
-					"index" : 13,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 1971.0, -311.5, 30.0, 30.0 ]
 				}
 
@@ -1088,11 +1088,11 @@
 				"box" : 				{
 					"comment" : "reset peak contract value average (bang)",
 					"id" : "obj-236",
-					"index" : 12,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 1836.0, -311.5, 30.0, 30.0 ]
 				}
 
@@ -1101,11 +1101,11 @@
 				"box" : 				{
 					"comment" : "capture peak contract valuenfor average (toggle)",
 					"id" : "obj-233",
-					"index" : 11,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 1689.0, -311.5, 30.0, 30.0 ]
 				}
 
@@ -1399,7 +1399,7 @@
 					"comment" : "contract avg value",
 					"id" : "obj-176",
 					"ignoreclick" : 1,
-					"index" : 8,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1445,7 +1445,7 @@
 				"box" : 				{
 					"comment" : "release midi channel",
 					"id" : "obj-156",
-					"index" : 10,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1458,7 +1458,7 @@
 				"box" : 				{
 					"comment" : "relase midi note",
 					"id" : "obj-157",
-					"index" : 9,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1607,7 +1607,7 @@
 				"box" : 				{
 					"comment" : "rest Value slider point",
 					"id" : "obj-217",
-					"index" : 7,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1653,7 +1653,7 @@
 				"box" : 				{
 					"comment" : "Reset: 0: max , 1: mid, 2: release",
 					"id" : "obj-214",
-					"index" : 8,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1666,7 +1666,7 @@
 				"box" : 				{
 					"comment" : "Mode: 0: off, 1: max , 2: mid, 3: release",
 					"id" : "obj-215",
-					"index" : 7,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1885,7 +1885,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 609.0, 1208.593806266784668, 160.0, 22.0 ],
-					"text" : "host 10.0.0.187"
+					"text" : "host 6.6.6.6"
 				}
 
 			}
@@ -2062,7 +2062,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ -14.464285671710968, 1059.607135832309723, 70.0, 22.0 ],
-					"text" : "loadmess 2"
+					"text" : "loadmess 1"
 				}
 
 			}
@@ -2105,7 +2105,7 @@
 				"box" : 				{
 					"comment" : "wifi select menu out",
 					"id" : "obj-132",
-					"index" : 6,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2117,11 +2117,11 @@
 				"box" : 				{
 					"comment" : "wifi select menu in",
 					"id" : "obj-131",
-					"index" : 6,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 841.0, -307.466669499874115, 30.0, 30.0 ]
 				}
 
@@ -2164,7 +2164,7 @@
 				"box" : 				{
 					"comment" : "Midi Port Select",
 					"id" : "obj-121",
-					"index" : 5,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -2202,7 +2202,7 @@
 				"box" : 				{
 					"comment" : "muted",
 					"id" : "obj-118",
-					"index" : 5,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2332,7 +2332,7 @@
 				"box" : 				{
 					"comment" : "Mute",
 					"id" : "obj-101",
-					"index" : 4,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -2379,7 +2379,7 @@
 				"box" : 				{
 					"comment" : "Selected midi channel",
 					"id" : "obj-77",
-					"index" : 4,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2579,7 +2579,7 @@
 				"box" : 				{
 					"comment" : "Selected notes in kslider",
 					"id" : "obj-574",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2591,7 +2591,7 @@
 				"box" : 				{
 					"comment" : "current note",
 					"id" : "obj-569",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2603,7 +2603,7 @@
 				"box" : 				{
 					"comment" : "device level",
 					"id" : "obj-564",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2615,7 +2615,7 @@
 				"box" : 				{
 					"comment" : "midi channel",
 					"id" : "obj-563",
-					"index" : 3,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -2628,7 +2628,7 @@
 				"box" : 				{
 					"comment" : "Start/Stop",
 					"id" : "obj-555",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -2641,7 +2641,7 @@
 				"box" : 				{
 					"comment" : "master keyboard input",
 					"id" : "obj-538",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -2752,7 +2752,7 @@
 				"box" : 				{
 					"id" : "obj-566",
 					"inputs" : 3,
-					"int" : 2,
+					"int" : 1,
 					"maxclass" : "gswitch",
 					"numinlets" : 4,
 					"numoutlets" : 1,
@@ -2907,7 +2907,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ -11.0, 1598.0, 50.0, 22.0 ],
-					"text" : "set 0.3"
+					"text" : "set 0.2"
 				}
 
 			}
@@ -2931,7 +2931,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ -11.0, 1486.0, 80.0, 22.0 ],
-					"text" : "loadmess 0.3"
+					"text" : "loadmess 0.2"
 				}
 
 			}
@@ -3167,7 +3167,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 10.0, 418.543963670730591, 26.0, 50.0 ],
 					"size" : 3,
-					"value" : 2
+					"value" : 1
 				}
 
 			}
@@ -3214,7 +3214,7 @@
 				"box" : 				{
 					"id" : "obj-540",
 					"inputs" : 3,
-					"int" : 2,
+					"int" : 1,
 					"maxclass" : "gswitch",
 					"numinlets" : 4,
 					"numoutlets" : 1,
@@ -9018,7 +9018,65 @@
 				}
 
 			}
- ]
+ ],
+		"dependency_cache" : [ 			{
+				"name" : "dynamic_scaling_2.maxpat",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "keyBoardChordTracker.jsfile",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/other",
+				"patcherrelativepath" : "../other",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "uniqueList.jsfile",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/other",
+				"patcherrelativepath" : "../other",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "devices.txt",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/data",
+				"patcherrelativepath" : "../data",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "serialPortIdentifier.maxpat",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "dynamic_scaling.maxpat",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "average_peak.maxpat",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "average_trough.maxpat",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
