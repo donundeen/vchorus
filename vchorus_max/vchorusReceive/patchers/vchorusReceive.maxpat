@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 11,
+			"minor" : 2,
+			"revision" : 0,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 186.0, 95.0, 722.0, 694.0 ],
+		"rect" : [ 82.0, 87.0, 725.0, 574.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,42 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-340",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 2991.0, -263.0, 135.0, 22.0 ],
+					"text" : "s #0unsticktwitchcontrol"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "unstick twitch contol",
+					"id" : "obj-338",
+					"index" : 0,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 2998.0, -318.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ -81.0, 1358.0, 133.0, 22.0 ],
+					"text" : "r #0unsticktwitchcontrol"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-334",
 					"maxclass" : "newobj",
@@ -345,6 +381,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-320",
+					"int" : 1,
 					"maxclass" : "gswitch",
 					"numinlets" : 3,
 					"numoutlets" : 1,
@@ -397,7 +434,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 299.0, 1230.0, 129.0, 22.0 ],
+					"patching_rect" : [ 336.0, 1187.0, 129.0, 22.0 ],
 					"text" : "r #0twitchcontroltoggle"
 				}
 
@@ -2315,7 +2352,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 609.0, 1208.593806266784668, 160.0, 22.0 ],
-					"text" : "host 10.0.0.188"
+					"text" : "host 6.6.6.6"
 				}
 
 			}
@@ -3984,6 +4021,7 @@
 					"enablevscroll" : 0,
 					"id" : "obj-478",
 					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "serialPortIdentifier.maxpat",
 					"numinlets" : 2,
@@ -6474,6 +6512,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-329", 0 ],
+					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-103", 0 ],
 					"source" : [ "obj-100", 0 ]
 				}
@@ -8168,6 +8213,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-340", 0 ],
+					"source" : [ "obj-338", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-318", 1 ],
 					"order" : 1,
 					"source" : [ "obj-339", 0 ]
@@ -8195,6 +8247,13 @@
 					"destination" : [ "obj-47", 0 ],
 					"order" : 0,
 					"source" : [ "obj-34", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-319", 1 ],
+					"source" : [ "obj-347", 0 ]
 				}
 
 			}
@@ -9093,16 +9152,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-319", 1 ],
-					"order" : 1,
-					"source" : [ "obj-541", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-347", 0 ],
-					"order" : 0,
 					"source" : [ "obj-541", 0 ]
 				}
 
