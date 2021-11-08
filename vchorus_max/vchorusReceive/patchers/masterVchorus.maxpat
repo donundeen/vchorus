@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 2,
-			"revision" : 0,
+			"minor" : 1,
+			"revision" : 11,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 97.0, 1104.0, 595.0 ],
+		"rect" : [ 65.0, 87.0, 1555.0, 711.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -135,7 +135,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 250.333325982093811, 2572.999990701675415, 82.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1439.666662454605103, 347.666666865348816, 82.0, 20.0 ],
+					"presentation_rect" : [ 1439.666662454605103, 351.666666865348816, 82.0, 20.0 ],
 					"text" : "unstick twitch"
 				}
 
@@ -150,7 +150,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 218.0, 2572.999990701675415, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1407.333336472511292, 347.666666865348816, 24.0, 24.0 ]
+					"presentation_rect" : [ 637.666653513908386, 526.166666865348816, 24.0, 24.0 ]
 				}
 
 			}
@@ -174,7 +174,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 302.666660189628601, 1994.999990701675415, 82.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1439.666662454605103, 181.666666865348816, 82.0, 20.0 ],
+					"presentation_rect" : [ 1439.666662454605103, 186.666666865348816, 82.0, 20.0 ],
 					"text" : "unstick twitch"
 				}
 
@@ -189,7 +189,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 270.33333420753479, 1994.999990701675415, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1407.333336472511292, 181.666666865348816, 24.0, 24.0 ]
+					"presentation_rect" : [ 1407.333336472511292, 349.666666865348816, 24.0, 24.0 ]
 				}
 
 			}
@@ -228,7 +228,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 255.0, 1446.999990701675415, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 637.666653513908386, 525.166666865348816, 24.0, 24.0 ]
+					"presentation_rect" : [ 637.666653513908386, 360.666666865348816, 24.0, 24.0 ]
 				}
 
 			}
@@ -267,7 +267,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 228.0, 886.190511763095856, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 637.666653513908386, 360.666666865348816, 24.0, 24.0 ]
+					"presentation_rect" : [ 1407.333336472511292, 186.666666865348816, 24.0, 24.0 ]
 				}
 
 			}
@@ -420,7 +420,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 41.0, 1975.000075340270996, 121.5, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1407.333336472511292, 290.000004410743713, 118.0, 20.0 ],
+					"presentation_rect" : [ 1407.333336472511292, 294.000004410743713, 118.0, 20.0 ],
 					"text" : "twitch control (secs)"
 				}
 
@@ -436,7 +436,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 69.0, 2028.000075340270996, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1435.666684746742249, 313.999995470046997, 50.0, 22.0 ]
+					"presentation_rect" : [ 1435.666684746742249, 317.999995470046997, 50.0, 22.0 ]
 				}
 
 			}
@@ -450,7 +450,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 41.0, 2028.000075340270996, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1407.333336472511292, 313.999995470046997, 22.166667461395264, 22.166667461395264 ]
+					"presentation_rect" : [ 1407.333336472511292, 317.999995470046997, 22.166667461395264, 22.166667461395264 ]
 				}
 
 			}
@@ -702,7 +702,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 37.000002384185791, 861.000014305114746, 121.5, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1407.333336472511292, 130.666675806045532, 118.0, 20.0 ],
+					"presentation_rect" : [ 1407.333336472511292, 135.666675806045532, 118.0, 20.0 ],
 					"text" : "twitch control (secs)"
 				}
 
@@ -718,7 +718,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 65.000002384185791, 914.000014305114746, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1435.666684746742249, 154.666666865348816, 50.0, 22.0 ]
+					"presentation_rect" : [ 1435.666684746742249, 159.666666865348816, 50.0, 22.0 ]
 				}
 
 			}
@@ -732,7 +732,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 37.000002384185791, 914.000014305114746, 24.0, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1407.333336472511292, 154.666666865348816, 22.166667461395264, 22.166667461395264 ]
+					"presentation_rect" : [ 1407.333336472511292, 159.666666865348816, 22.166667461395264, 22.166667461395264 ]
 				}
 
 			}
@@ -1287,7 +1287,7 @@
 					"patching_rect" : [ -585.0, -299.023810744285583, 473.0, 33.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 272.809525549411774, 612.690470576286316, 519.0, 33.0 ],
-					"text" : "Last updated: Althea 11/2/2021 8:44PM",
+					"text" : "Last updated: Althea 11/8/2021 10:49AM",
 					"textcolor" : [ 1.0, 0.0, 0.0, 1.0 ]
 				}
 
@@ -2057,22 +2057,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 1457.166684746742249, 553.966667532920837, 27.0, 37.0 ],
 					"saved_attribute_attributes" : 					{
-						"activeneedlecolor" : 						{
-							"expression" : ""
-						}
-,
-						"focusbordercolor" : 						{
-							"expression" : ""
-						}
-,
-						"activefgdialcolor" : 						{
-							"expression" : ""
-						}
-,
-						"fgdialcolor" : 						{
-							"expression" : ""
-						}
-,
 						"valueof" : 						{
 							"parameter_initial" : [ 249 ],
 							"parameter_initial_enable" : 1,
@@ -2294,22 +2278,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 709.333343386650085, 552.666666865348816, 27.0, 37.0 ],
 					"saved_attribute_attributes" : 					{
-						"activeneedlecolor" : 						{
-							"expression" : ""
-						}
-,
-						"focusbordercolor" : 						{
-							"expression" : ""
-						}
-,
-						"activefgdialcolor" : 						{
-							"expression" : ""
-						}
-,
-						"fgdialcolor" : 						{
-							"expression" : ""
-						}
-,
 						"valueof" : 						{
 							"parameter_initial" : [ 249 ],
 							"parameter_initial_enable" : 1,
@@ -2517,22 +2485,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 1447.166684746742249, 382.666666865348816, 27.0, 37.0 ],
 					"saved_attribute_attributes" : 					{
-						"activeneedlecolor" : 						{
-							"expression" : ""
-						}
-,
-						"focusbordercolor" : 						{
-							"expression" : ""
-						}
-,
-						"activefgdialcolor" : 						{
-							"expression" : ""
-						}
-,
-						"fgdialcolor" : 						{
-							"expression" : ""
-						}
-,
 						"valueof" : 						{
 							"parameter_initial" : [ 249 ],
 							"parameter_initial_enable" : 1,
@@ -2754,22 +2706,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 703.333343386650085, 389.666666865348816, 27.0, 37.0 ],
 					"saved_attribute_attributes" : 					{
-						"activeneedlecolor" : 						{
-							"expression" : ""
-						}
-,
-						"focusbordercolor" : 						{
-							"expression" : ""
-						}
-,
-						"activefgdialcolor" : 						{
-							"expression" : ""
-						}
-,
-						"fgdialcolor" : 						{
-							"expression" : ""
-						}
-,
 						"valueof" : 						{
 							"parameter_initial" : [ 249 ],
 							"parameter_initial_enable" : 1,
@@ -2991,22 +2927,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 1447.166684746742249, 215.166666865348816, 27.0, 37.0 ],
 					"saved_attribute_attributes" : 					{
-						"activeneedlecolor" : 						{
-							"expression" : ""
-						}
-,
-						"focusbordercolor" : 						{
-							"expression" : ""
-						}
-,
-						"activefgdialcolor" : 						{
-							"expression" : ""
-						}
-,
-						"fgdialcolor" : 						{
-							"expression" : ""
-						}
-,
 						"valueof" : 						{
 							"parameter_initial" : [ 249 ],
 							"parameter_initial_enable" : 1,
@@ -3228,22 +3148,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 699.666669249534607, 210.666666865348816, 27.0, 37.0 ],
 					"saved_attribute_attributes" : 					{
-						"activeneedlecolor" : 						{
-							"expression" : ""
-						}
-,
-						"focusbordercolor" : 						{
-							"expression" : ""
-						}
-,
-						"activefgdialcolor" : 						{
-							"expression" : ""
-						}
-,
-						"fgdialcolor" : 						{
-							"expression" : ""
-						}
-,
 						"valueof" : 						{
 							"parameter_initial" : [ 249 ],
 							"parameter_initial_enable" : 1,
@@ -5035,7 +4939,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ -63.500002384185791, 2123.385685622692108, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1349.666680932044983, 347.666666865348816, 50.0, 22.0 ],
+					"presentation_rect" : [ 1349.666680932044983, 351.666666865348816, 50.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -5061,7 +4965,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ -63.500002384185791, 2092.185685753822327, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1349.666680932044983, 320.666666865348816, 50.0, 22.0 ],
+					"presentation_rect" : [ 1349.666680932044983, 324.666666865348816, 50.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -5087,7 +4991,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ -63.500002384185791, 2064.185685753822327, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1349.666680932044983, 291.666666865348816, 50.0, 22.0 ],
+					"presentation_rect" : [ 1349.666680932044983, 295.666666865348816, 50.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -5581,7 +5485,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ -67.166666865348816, 993.333347082138062, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1349.666680932044983, 181.666666865348816, 50.0, 22.0 ],
+					"presentation_rect" : [ 1349.666680932044983, 186.666666865348816, 50.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -5607,7 +5511,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ -67.166666865348816, 962.13334721326828, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1349.666680932044983, 154.666666865348816, 50.0, 22.0 ],
+					"presentation_rect" : [ 1349.666680932044983, 159.666666865348816, 50.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -5633,7 +5537,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ -67.166666865348816, 934.13334721326828, 50.0, 22.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1349.666680932044983, 125.666666865348816, 50.0, 22.0 ],
+					"presentation_rect" : [ 1349.666680932044983, 130.666666865348816, 50.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_invisible" : 1,
@@ -6701,7 +6605,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-162",
-					"items" : [ "Select", "WiFi", "Device...", ",", "thyme", ",", "cedar", ",", "fir", ",", "cypress" ],
+					"items" : [ "Select", "WiFi", "Device...", ",", "thyme" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -6712,9 +6616,9 @@
 					"presentation_rect" : [ 823.500005602836609, 419.666666865348816, 100.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "Select WiFi Device...", "thyme", "cedar", "fir", "cypress" ],
+							"parameter_enum" : [ "Select WiFi Device...", "thyme" ],
 							"parameter_longname" : "umenu[11]",
-							"parameter_mmax" : 4,
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "umenu[11]",
 							"parameter_type" : 2
 						}
@@ -6728,7 +6632,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-36",
-					"items" : [ "Select", "WiFi", "Device...", ",", "thyme", ",", "cedar", ",", "fir", ",", "cypress" ],
+					"items" : [ "Select", "WiFi", "Device...", ",", "thyme" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -6739,9 +6643,9 @@
 					"presentation_rect" : [ 67.000001788139343, 424.166666865348816, 100.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "Select WiFi Device...", "thyme", "cedar", "fir", "cypress" ],
+							"parameter_enum" : [ "Select WiFi Device...", "thyme" ],
 							"parameter_longname" : "umenu[10]",
-							"parameter_mmax" : 4,
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "umenu[10]",
 							"parameter_type" : 2
 						}
@@ -6755,7 +6659,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-33",
-					"items" : [ "Select", "WiFi", "Device...", ",", "thyme", ",", "cedar", ",", "fir", ",", "cypress" ],
+					"items" : [ "Select", "WiFi", "Device...", ",", "thyme" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -6766,9 +6670,9 @@
 					"presentation_rect" : [ 823.500005602836609, 255.666666865348816, 100.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "Select WiFi Device...", "thyme", "cedar", "fir", "cypress" ],
+							"parameter_enum" : [ "Select WiFi Device...", "thyme" ],
 							"parameter_longname" : "umenu[9]",
-							"parameter_mmax" : 4,
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "umenu[9]",
 							"parameter_type" : 2
 						}
@@ -6782,7 +6686,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-31",
-					"items" : [ "Select", "WiFi", "Device...", ",", "thyme", ",", "cedar", ",", "fir", ",", "cypress" ],
+					"items" : [ "Select", "WiFi", "Device...", ",", "thyme" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -6793,9 +6697,9 @@
 					"presentation_rect" : [ 65.000001788139343, 255.166666865348816, 100.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "Select WiFi Device...", "thyme", "cedar", "fir", "cypress" ],
+							"parameter_enum" : [ "Select WiFi Device...", "thyme" ],
 							"parameter_longname" : "umenu[8]",
-							"parameter_mmax" : 4,
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "umenu[8]",
 							"parameter_type" : 2
 						}
@@ -6809,7 +6713,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-6",
-					"items" : [ "Select", "WiFi", "Device...", ",", "thyme", ",", "cedar", ",", "fir", ",", "cypress" ],
+					"items" : [ "Select", "WiFi", "Device...", ",", "thyme" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -6820,9 +6724,9 @@
 					"presentation_rect" : [ 823.500005602836609, 83.166666865348816, 100.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "Select WiFi Device...", "thyme", "cedar", "fir", "cypress" ],
+							"parameter_enum" : [ "Select WiFi Device...", "thyme" ],
 							"parameter_longname" : "umenu[7]",
-							"parameter_mmax" : 4,
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "umenu[7]",
 							"parameter_type" : 2
 						}
@@ -6836,7 +6740,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-161",
-					"items" : [ "Select", "WiFi", "Device...", ",", "thyme", ",", "cedar", ",", "fir", ",", "cypress" ],
+					"items" : [ "Select", "WiFi", "Device...", ",", "thyme" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -6847,9 +6751,9 @@
 					"presentation_rect" : [ 67.000001788139343, 83.666666865348816, 100.0, 22.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "Select WiFi Device...", "thyme", "cedar", "fir", "cypress" ],
+							"parameter_enum" : [ "Select WiFi Device...", "thyme" ],
 							"parameter_longname" : "umenu[6]",
-							"parameter_mmax" : 4,
+							"parameter_mmax" : 1,
 							"parameter_shortname" : "umenu[6]",
 							"parameter_type" : 2
 						}
@@ -6973,7 +6877,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-145",
-					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "Network Session 1", ",", "Scarlett 4i4 USB", ",", "TouchOSC Bridge", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -6985,9 +6889,9 @@
 					"presentation_rect" : [ 892.500005602836609, 444.166666865348816, 100.0, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "AU DLS Synth 1", "from Max 1", "from Max 2" ],
+							"parameter_enum" : [ "AU DLS Synth 1", "Network Session 1", "Scarlett 4i4 USB", "TouchOSC Bridge", "from Max 1", "from Max 2" ],
 							"parameter_longname" : "umenu[5]",
-							"parameter_mmax" : 2,
+							"parameter_mmax" : 5,
 							"parameter_shortname" : "umenu[5]",
 							"parameter_type" : 2
 						}
@@ -7053,7 +6957,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-133",
-					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "Network Session 1", ",", "Scarlett 4i4 USB", ",", "TouchOSC Bridge", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -7065,9 +6969,9 @@
 					"presentation_rect" : [ 142.000001788139343, 444.166666865348816, 100.0, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "AU DLS Synth 1", "from Max 1", "from Max 2" ],
+							"parameter_enum" : [ "AU DLS Synth 1", "Network Session 1", "Scarlett 4i4 USB", "TouchOSC Bridge", "from Max 1", "from Max 2" ],
 							"parameter_longname" : "umenu[4]",
-							"parameter_mmax" : 2,
+							"parameter_mmax" : 5,
 							"parameter_shortname" : "umenu[4]",
 							"parameter_type" : 2
 						}
@@ -7133,7 +7037,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-110",
-					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "Network Session 1", ",", "Scarlett 4i4 USB", ",", "TouchOSC Bridge", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -7145,9 +7049,9 @@
 					"presentation_rect" : [ 896.500005602836609, 277.166666865348816, 100.0, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "AU DLS Synth 1", "from Max 1", "from Max 2" ],
+							"parameter_enum" : [ "AU DLS Synth 1", "Network Session 1", "Scarlett 4i4 USB", "TouchOSC Bridge", "from Max 1", "from Max 2" ],
 							"parameter_longname" : "umenu[3]",
-							"parameter_mmax" : 2,
+							"parameter_mmax" : 5,
 							"parameter_shortname" : "umenu[3]",
 							"parameter_type" : 2
 						}
@@ -7213,7 +7117,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-99",
-					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "Network Session 1", ",", "Scarlett 4i4 USB", ",", "TouchOSC Bridge", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -7225,9 +7129,9 @@
 					"presentation_rect" : [ 134.000001788139343, 279.166666865348816, 100.0, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "AU DLS Synth 1", "from Max 1", "from Max 2" ],
+							"parameter_enum" : [ "AU DLS Synth 1", "Network Session 1", "Scarlett 4i4 USB", "TouchOSC Bridge", "from Max 1", "from Max 2" ],
 							"parameter_longname" : "umenu[2]",
-							"parameter_mmax" : 2,
+							"parameter_mmax" : 5,
 							"parameter_shortname" : "umenu[2]",
 							"parameter_type" : 2
 						}
@@ -7293,7 +7197,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-78",
-					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "Network Session 1", ",", "Scarlett 4i4 USB", ",", "TouchOSC Bridge", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -7305,9 +7209,9 @@
 					"presentation_rect" : [ 900.500005602836609, 107.166666865348816, 100.0, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "AU DLS Synth 1", "from Max 1", "from Max 2" ],
+							"parameter_enum" : [ "AU DLS Synth 1", "Network Session 1", "Scarlett 4i4 USB", "TouchOSC Bridge", "from Max 1", "from Max 2" ],
 							"parameter_longname" : "umenu[1]",
-							"parameter_mmax" : 2,
+							"parameter_mmax" : 5,
 							"parameter_shortname" : "umenu[1]",
 							"parameter_type" : 2
 						}
@@ -7438,7 +7342,7 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-7",
-					"items" : [ "AU DLS Synth 1", ",", "from Max 1", ",", "from Max 2" ],
+					"items" : [ "AU DLS Synth 1", ",", "Network Session 1", ",", "Scarlett 4i4 USB", ",", "TouchOSC Bridge", ",", "from Max 1", ",", "from Max 2" ],
 					"labelclick" : 1,
 					"maxclass" : "umenu",
 					"numinlets" : 1,
@@ -7450,9 +7354,9 @@
 					"presentation_rect" : [ 140.000001788139343, 108.666666865348816, 100.0, 23.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_enum" : [ "AU DLS Synth 1", "from Max 1", "from Max 2" ],
+							"parameter_enum" : [ "AU DLS Synth 1", "Network Session 1", "Scarlett 4i4 USB", "TouchOSC Bridge", "from Max 1", "from Max 2" ],
 							"parameter_longname" : "umenu",
-							"parameter_mmax" : 2,
+							"parameter_mmax" : 5,
 							"parameter_shortname" : "umenu",
 							"parameter_type" : 2
 						}
@@ -7522,7 +7426,7 @@
 						}
 , 						{
 							"number" : 5,
-							"data" : [ 5, "obj-48", "toggle", "int", 0, 5, "obj-13", "number", "int", 100, 5, "obj-17", "slider", "float", 1.0, 5, "obj-22", "slider", "float", 1.0, 5, "obj-25", "slider", "float", 1.0, 5, "obj-28", "slider", "float", 1.0, 5, "obj-35", "slider", "float", 1.0, 5, "obj-32", "slider", "float", 1.0, 6, "obj-59", "kslider", "chord", 60, 19, 6, "obj-58", "kslider", "chord", 36, 64, 10, "obj-14", "kslider", "chord", 72, 28, 77, 9, 82, 8, 6, "obj-12", "kslider", "chord", 36, 64, 6, "obj-24", "kslider", "chord", 60, 34, 6, "obj-23", "kslider", "chord", 36, 64, 6, "obj-57", "kslider", "chord", 60, 32, 6, "obj-30", "kslider", "chord", 36, 64, 6, "obj-65", "kslider", "chord", 58, 14, 6, "obj-64", "kslider", "chord", 36, 64, 4, "obj-70", "kslider", "chord", 6, "obj-69", "kslider", "chord", 36, 64, 5, "obj-113", "number", "int", 1, 5, "obj-119", "number", "int", 2, 5, "obj-122", "number", "int", 3, 5, "obj-125", "number", "int", 4, 5, "obj-128", "number", "int", 5, 5, "obj-131", "number", "int", 0, 5, "obj-7", "umenu", "int", 3, 5, "obj-78", "umenu", "int", 3, 5, "obj-99", "umenu", "int", 3, 5, "obj-110", "umenu", "int", 3, 5, "obj-133", "umenu", "int", 3, 5, "obj-145", "umenu", "int", 1, 5, "obj-161", "umenu", "int", 1, 5, "obj-6", "umenu", "int", 1, 5, "obj-31", "umenu", "int", 1, 5, "obj-33", "umenu", "int", 1, 5, "obj-36", "umenu", "int", 1, 5, "obj-162", "umenu", "int", 1, 5, "obj-238", "slider", "float", 0.0, 5, "obj-239", "slider", "float", 0.0, 5, "obj-240", "slider", "float", 0.0, 5, "obj-241", "slider", "float", 0.0, 5, "obj-242", "slider", "float", 0.0, 5, "obj-243", "slider", "float", 0.0, 5, "obj-244", "number", "int", -219, 5, "obj-248", "number", "int", 0, 5, "obj-252", "number", "int", -270, 5, "obj-250", "number", "int", 0, 5, "obj-256", "number", "int", -295, 5, "obj-254", "number", "int", 0, 5, "obj-260", "number", "int", -205, 5, "obj-258", "number", "int", 0, 5, "obj-264", "number", "int", -216, 5, "obj-262", "number", "int", 0, 5, "obj-268", "number", "int", -283, 5, "obj-266", "number", "int", 0, 5, "obj-283", "toggle", "int", 0, 5, "obj-180", "toggle", "int", 0, 5, "obj-183", "toggle", "int", 0, 5, "obj-276", "flonum", "float", 0.0, 5, "obj-275", "flonum", "float", 0.0, 5, "obj-274", "flonum", "float", 13.0, 5, "obj-390", "toggle", "int", 0, 5, "obj-388", "toggle", "int", 0, 5, "obj-386", "toggle", "int", 0, 5, "obj-378", "flonum", "float", 0.0, 5, "obj-377", "flonum", "float", 0.0, 5, "obj-376", "flonum", "float", 13.0, 5, "obj-420", "toggle", "int", 0, 5, "obj-418", "toggle", "int", 0, 5, "obj-416", "toggle", "int", 0, 5, "obj-408", "flonum", "float", 0.0, 5, "obj-407", "flonum", "float", 0.0, 5, "obj-406", "flonum", "float", 13.0, 5, "obj-435", "toggle", "int", 0, 5, "obj-433", "toggle", "int", 0, 5, "obj-431", "toggle", "int", 0, 5, "obj-423", "flonum", "float", 0.0, 5, "obj-422", "flonum", "float", 0.0, 5, "obj-421", "flonum", "float", 13.0, 5, "obj-450", "toggle", "int", 0, 5, "obj-448", "toggle", "int", 0, 5, "obj-446", "toggle", "int", 0, 5, "obj-438", "flonum", "float", 0.0, 5, "obj-437", "flonum", "float", 0.0, 5, "obj-436", "flonum", "float", 13.0, 5, "obj-465", "toggle", "int", 0, 5, "obj-463", "toggle", "int", 0, 5, "obj-461", "toggle", "int", 0, 5, "obj-453", "flonum", "float", 0.0, 5, "obj-452", "flonum", "float", 0.0, 5, "obj-451", "flonum", "float", 13.0, 5, "obj-167", "flonum", "float", 0.0, 5, "obj-171", "live.text", "float", 0.0, 5, "obj-189", "live.text", "float", 0.0, 5, "obj-191", "live.text", "float", 0.0, 5, "obj-193", "live.text", "float", 0.0, 5, "obj-195", "live.text", "float", 0.0, 5, "obj-197", "live.text", "float", 0.0, 5, "obj-199", "live.text", "float", 0.0, 5, "obj-218", "toggle", "int", 0, 5, "obj-216", "toggle", "int", 0, 5, "obj-214", "toggle", "int", 0, 5, "obj-138", "toggle", "int", 0, 5, "obj-144", "live.dial", "float", 4212.0, 5, "obj-163", "live.dial", "float", 4022.0, 5, "obj-205", "live.dial", "float", 249.0, 5, "obj-302", "live.dial", "float", 7326.0, 5, "obj-316", "live.dial", "float", 791.0, 5, "obj-315", "live.dial", "float", 790.0, 5, "obj-309", "live.dial", "float", 249.0, 5, "obj-308", "live.dial", "float", 6860.0, 5, "obj-329", "live.dial", "float", 2552.0, 5, "obj-328", "live.dial", "float", 2522.0, 5, "obj-322", "live.dial", "float", 249.0, 5, "obj-321", "live.dial", "float", 10133.0, 5, "obj-342", "live.dial", "float", 5946.0, 5, "obj-341", "live.dial", "float", 2447.0, 5, "obj-335", "live.dial", "float", 249.0, 5, "obj-334", "live.dial", "float", 9931.0, 5, "obj-355", "live.dial", "float", 2789.0, 5, "obj-354", "live.dial", "float", 1500.0, 5, "obj-348", "live.dial", "float", 249.0, 5, "obj-347", "live.dial", "float", 7326.0, 5, "obj-367", "live.dial", "float", 900.0, 5, "obj-366", "live.dial", "float", 1500.0, 5, "obj-360", "live.dial", "float", 249.0, 5, "obj-359", "live.dial", "float", 249.0 ]
+							"data" : [ 5, "obj-48", "toggle", "int", 0, 5, "obj-13", "number", "int", 100, 5, "obj-17", "slider", "float", 0.207414507865906, 5, "obj-22", "slider", "float", 0.207414507865906, 5, "obj-25", "slider", "float", 0.207414507865906, 5, "obj-28", "slider", "float", 0.207414507865906, 5, "obj-35", "slider", "float", 0.207414507865906, 5, "obj-32", "slider", "float", 0.0, 6, "obj-59", "kslider", "chord", 60, 19, 6, "obj-58", "kslider", "chord", 36, 64, 10, "obj-14", "kslider", "chord", 72, 28, 77, 9, 82, 8, 6, "obj-12", "kslider", "chord", 36, 64, 6, "obj-24", "kslider", "chord", 58, 13, 6, "obj-23", "kslider", "chord", 36, 64, 6, "obj-57", "kslider", "chord", 60, 32, 6, "obj-30", "kslider", "chord", 36, 64, 6, "obj-65", "kslider", "chord", 58, 14, 6, "obj-64", "kslider", "chord", 36, 64, 4, "obj-70", "kslider", "chord", 6, "obj-69", "kslider", "chord", 36, 64, 5, "obj-113", "number", "int", 1, 5, "obj-119", "number", "int", 2, 5, "obj-122", "number", "int", 3, 5, "obj-125", "number", "int", 4, 5, "obj-128", "number", "int", 5, 5, "obj-131", "number", "int", 0, 5, "obj-7", "umenu", "int", 4, 5, "obj-78", "umenu", "int", 4, 5, "obj-99", "umenu", "int", 4, 5, "obj-110", "umenu", "int", 4, 5, "obj-133", "umenu", "int", 3, 5, "obj-145", "umenu", "int", 1, 5, "obj-161", "umenu", "int", 1, 5, "obj-6", "umenu", "int", 1, 5, "obj-31", "umenu", "int", 1, 5, "obj-33", "umenu", "int", 1, 5, "obj-36", "umenu", "int", 1, 5, "obj-162", "umenu", "int", 1, 5, "obj-238", "slider", "float", 0.0, 5, "obj-239", "slider", "float", 0.0, 5, "obj-240", "slider", "float", 0.0, 5, "obj-241", "slider", "float", 0.0, 5, "obj-242", "slider", "float", 0.0, 5, "obj-243", "slider", "float", 0.0, 5, "obj-244", "number", "int", -219, 5, "obj-248", "number", "int", 0, 5, "obj-252", "number", "int", -270, 5, "obj-250", "number", "int", 0, 5, "obj-256", "number", "int", -295, 5, "obj-254", "number", "int", 0, 5, "obj-260", "number", "int", -205, 5, "obj-258", "number", "int", 0, 5, "obj-264", "number", "int", -216, 5, "obj-262", "number", "int", 0, 5, "obj-268", "number", "int", -283, 5, "obj-266", "number", "int", 0, 5, "obj-283", "toggle", "int", 0, 5, "obj-180", "toggle", "int", 0, 5, "obj-183", "toggle", "int", 0, 5, "obj-276", "flonum", "float", 3142.0, 5, "obj-275", "flonum", "float", 0.0, 5, "obj-274", "flonum", "float", 13.0, 5, "obj-390", "toggle", "int", 0, 5, "obj-388", "toggle", "int", 0, 5, "obj-386", "toggle", "int", 0, 5, "obj-378", "flonum", "float", 3142.0, 5, "obj-377", "flonum", "float", 0.0, 5, "obj-376", "flonum", "float", 13.0, 5, "obj-420", "toggle", "int", 0, 5, "obj-418", "toggle", "int", 0, 5, "obj-416", "toggle", "int", 0, 5, "obj-408", "flonum", "float", 3142.0, 5, "obj-407", "flonum", "float", 0.0, 5, "obj-406", "flonum", "float", 13.0, 5, "obj-435", "toggle", "int", 0, 5, "obj-433", "toggle", "int", 0, 5, "obj-431", "toggle", "int", 0, 5, "obj-423", "flonum", "float", 3142.0, 5, "obj-422", "flonum", "float", 0.0, 5, "obj-421", "flonum", "float", 13.0, 5, "obj-450", "toggle", "int", 0, 5, "obj-448", "toggle", "int", 0, 5, "obj-446", "toggle", "int", 0, 5, "obj-438", "flonum", "float", 3142.0, 5, "obj-437", "flonum", "float", 0.0, 5, "obj-436", "flonum", "float", 13.0, 5, "obj-465", "toggle", "int", 0, 5, "obj-463", "toggle", "int", 0, 5, "obj-461", "toggle", "int", 0, 5, "obj-453", "flonum", "float", 0.0, 5, "obj-452", "flonum", "float", 0.0, 5, "obj-451", "flonum", "float", 13.0, 5, "obj-167", "flonum", "float", 0.0, 5, "obj-171", "live.text", "float", 0.0, 5, "obj-189", "live.text", "float", 0.0, 5, "obj-191", "live.text", "float", 0.0, 5, "obj-193", "live.text", "float", 0.0, 5, "obj-195", "live.text", "float", 0.0, 5, "obj-197", "live.text", "float", 0.0, 5, "obj-199", "live.text", "float", 0.0, 5, "obj-218", "toggle", "int", 0, 5, "obj-216", "toggle", "int", 0, 5, "obj-214", "toggle", "int", 0, 5, "obj-138", "toggle", "int", 0, 5, "obj-144", "live.dial", "float", 4212.0, 5, "obj-163", "live.dial", "float", 4022.0, 5, "obj-205", "live.dial", "float", 249.0, 5, "obj-302", "live.dial", "float", 7326.0, 5, "obj-316", "live.dial", "float", 791.0, 5, "obj-315", "live.dial", "float", 790.0, 5, "obj-309", "live.dial", "float", 249.0, 5, "obj-308", "live.dial", "float", 6860.0, 5, "obj-329", "live.dial", "float", 2552.0, 5, "obj-328", "live.dial", "float", 2522.0, 5, "obj-322", "live.dial", "float", 249.0, 5, "obj-321", "live.dial", "float", 10133.0, 5, "obj-342", "live.dial", "float", 5946.0, 5, "obj-341", "live.dial", "float", 2447.0, 5, "obj-335", "live.dial", "float", 249.0, 5, "obj-334", "live.dial", "float", 9931.0, 5, "obj-355", "live.dial", "float", 2789.0, 5, "obj-354", "live.dial", "float", 1500.0, 5, "obj-348", "live.dial", "float", 249.0, 5, "obj-347", "live.dial", "float", 7326.0, 5, "obj-367", "live.dial", "float", 900.0, 5, "obj-366", "live.dial", "float", 1500.0, 5, "obj-360", "live.dial", "float", 249.0, 5, "obj-359", "live.dial", "float", 249.0, 5, "obj-468", "toggle", "int", 0, 5, "obj-470", "flonum", "float", 2.650000095367432, 5, "obj-281", "toggle", "int", 0, 5, "obj-280", "flonum", "float", 2.650000095367432, 5, "obj-477", "toggle", "int", 0, 5, "obj-476", "flonum", "float", 2.650000095367432, 5, "obj-526", "toggle", "int", 0, 5, "obj-525", "flonum", "float", 2.650000095367432, 5, "obj-531", "toggle", "int", 0, 5, "obj-530", "flonum", "float", 2.650000095367432, 5, "obj-536", "toggle", "int", 0, 5, "obj-535", "flonum", "float", 2.650000095367432 ]
 						}
 , 						{
 							"number" : 12,
@@ -12646,87 +12550,91 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "vchorusReceive.maxpat",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "dynamic_scaling_2.maxpat",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "keyBoardChordTracker.jsfile",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/other",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/other",
 				"patcherrelativepath" : "../other",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "uniqueList.jsfile",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/other",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/other",
 				"patcherrelativepath" : "../other",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "devices.txt",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/data",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/data",
 				"patcherrelativepath" : "../data",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "serialPortIdentifier.maxpat",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "dynamic_scaling.maxpat",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "average_peak.maxpat",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "average_trough.maxpat",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vchorusHue.maxpat",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "BulbArray.jsfile.js",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/code",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/code",
 				"patcherrelativepath" : "../code",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "vChorusTouchOSC.maxpat",
-				"bootpath" : "~/Documents/htdocs/vchorus/vchorus_max/vchorusReceive/patchers",
+				"bootpath" : "~/Desktop/vchorus/vchorus-master/vchorus_max/vchorusReceive/patchers",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "shell.mxo",
+				"type" : "iLaX"
 			}
  ],
 		"autosave" : 0,
@@ -12806,8 +12714,8 @@
 , 			{
 				"name" : "texteditGold",
 				"default" : 				{
-					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.764706, 0.592157, 0.101961, 0.68 ]
+					"bgcolor" : [ 0.764706, 0.592157, 0.101961, 0.68 ],
+					"textcolor_inverse" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
